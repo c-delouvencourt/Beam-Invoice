@@ -1,18 +1,13 @@
-# Sails + React + Webpack boilerplate
+<a href="https://lab.nocturne.app"><img src="https://i.imgur.com/oDFGauE.png" align="left" height="66" width="174"/></a>      
 
-A boilerplate for [Sails](http://sailsjs.org) apps with a [React](https://facebook.github.io/react/) frontend.
 
-## Includes
+**A simple Freelance platform to invoice easily.**
 
-* [Sails](http://sailsjs.org)
-* [React](https://facebook.github.io/react/)
-* [Babel with ES2015](https://babeljs.io)
-* [React Router](https://github.com/reactjs/react-router)
-* [sails-hook-autoreload](https://github.com/sgress454/sails-hook-autoreload)
-* [Sass](https://github.com/jtangelder/sass-loader)
-* [Autoprefixer](https://github.com/passy/autoprefixer-loader)
-* [React Hot Loader](https://github.com/gaearon/react-hot-loader)
 
+<br>
+
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ___
 
