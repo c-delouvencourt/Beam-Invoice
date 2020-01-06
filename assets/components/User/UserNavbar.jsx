@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
+import {useTranslation, withTranslation} from "react-i18next";
 
-export default class UserNavbar extends Component {
+class UserNavbar extends Component {
+
   constructor(props) {
     super(props);
   }
 
   render() {
+    const { t, i18n } = this.props;
+
     return (
       <nav className="navbar" role="navigation" aria-label="main navigation">
         <div className="navbar-brand">
@@ -24,29 +28,29 @@ export default class UserNavbar extends Component {
         <div id="navbarBasicExample" className="navbar-menu">
           <div className="navbar-start">
             <a className="navbar-item">
-              Tableau de bord
+              {t('navbar.dashboard')}
             </a>
 
             <a className="navbar-item">
-              Clients
+              {t('navbar.clients')}
             </a>
 
             <a className="navbar-item">
-              Devis
+              {t('navbar.devis')}
             </a>
 
             <a className="navbar-item">
-              Factures
+              {t('navbar.factures')}
             </a>
           </div>
           <div className="navbar-end">
             <div className="navbar-item">
               <div className="buttons">
-                <a className="button is-primary">
-                  <strong>Sign up</strong>
+                <a className="button is-small is-primary" onClick={() => i18n.changeLanguage('fr')}>
+                  <strong>Français</strong>
                 </a>
-                <a className="button is-light">
-                  Log in
+                <a className="button is-small is-primary" onClick={() => i18n.changeLanguage('en')}>
+                  <strong>English</strong>
                 </a>
               </div>
             </div>
@@ -56,3 +60,5 @@ export default class UserNavbar extends Component {
     );
   }
 }
+
+export default withTranslation()(UserNavbar);

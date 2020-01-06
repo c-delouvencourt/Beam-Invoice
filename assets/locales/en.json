@@ -1,7 +1,10 @@
 {
-  "fr": {
-    "translation": {
-      "Welcome to React": "Welcome to React and react-i18next"
+  "translation": {
+    "navbar": {
+      "dashboard" : "Dashboard",
+      "clients" : "Clients",
+      "devis" : "Estimates",
+      "factures" : "Invoices"
     }
   }
 }

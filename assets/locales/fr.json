@@ -1,7 +1,10 @@
 {
-  "fr": {
-    "translation": {
-      "Welcome to React": "Bienvenue sur Beam"
+  "translation": {
+    "navbar": {
+      "dashboard" : "Tableau de Bord",
+      "clients" : "Clients",
+      "devis" : "Devis",
+      "factures" : "Factures"
     }
   }
 }
