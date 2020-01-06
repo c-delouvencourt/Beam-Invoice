@@ -11,6 +11,10 @@
 
 ___
 
+<img src="https://i.imgur.com/1qDPHN4.png" align="left"/>
+
+___
+
 ### Get Started
 
 ```shell
