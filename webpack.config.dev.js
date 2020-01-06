@@ -40,6 +40,10 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /(\.css$)/,
+        loaders: ['style-loader', 'css-loader']
+      },
+      {
         test: /\.scss$/,
         use: [
           { loader: 'style-loader' },
@@ -48,14 +52,14 @@ module.exports = {
         ]
       },
       {
-        test: /\.(ttf|eot|svg|woff)(\?[a-z0-9]+)?$/,
+        test: /\.(ttf|eot|svg|woff|png|svg|jpg|gif)(\?[a-z0-9]+)?$/,
         use: [{ loader: 'file-loader?name=[path][name].[ext]' }]
       },
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         use: [{ loader: 'babel-loader' }],
-        include: path.join(__dirname, 'assets')
+        include: path.join(__dirname, 'assets'),
       }
     ],
 

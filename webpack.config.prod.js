@@ -60,21 +60,27 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.scss$/,
-        use: ['style-loader', 'css-loader?sourceMap', 'sass-loader?sourceMap']
+        test: /(\.css$)/,
+        loaders: ['style-loader', 'css-loader']
       },
       {
-        test: /\.(ttf|eot|svg|woff)(\?[a-z0-9]+)?$/,
-        use: ['file-loader?name=[path][name].[ext]']
+        test: /\.scss$/,
+        use: [
+          { loader: 'style-loader' },
+          { loader: 'css-loader?sourceMap' },
+          { loader: 'sass-loader?sourceMap' }
+        ]
+      },
+      {
+        test: /\.(ttf|eot|svg|woff|png|jpg|gif)(\?[a-z0-9]+)?$/,
+        use: [{ loader: 'file-loader?name=[path][name].[ext]' }]
       },
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        use: 'babel-loader',
-        include: path.join(__dirname, 'assets')
+        use: [{ loader: 'babel-loader' }],
+        include: path.join(__dirname, 'assets'),
       }
     ],
-
-    noParse: /\.min\.js/
   }
 };

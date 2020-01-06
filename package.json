@@ -13,6 +13,7 @@
   "dependencies": {
     "@sailshq/lodash": "^3.10.3",
     "assets-webpack-plugin": "^3.4.0",
+    "file-loader": "^4.0.0",
     "colors": "^1.1.2",
     "ejs": "^2.5.5",
     "foreman": "^3.0.1",
@@ -44,9 +45,9 @@
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/markmur/sails-react-webpack.git"
+    "url": "git://github.com/PHClement/Beam-Invoice.git"
   },
-  "author": "Mark Murray <mark@boxfish.com>",
+  "author": "Clément de Louvencourt <c.delouvencourt@nocturne.app>",
   "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^6.3.6",
