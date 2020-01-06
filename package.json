@@ -1,17 +1,14 @@
 {
-  "name": "sails-react-webpack",
+  "name": "beam-invoice",
   "private": false,
-  "version": "0.2.0",
+  "version": "0.0.1",
   "description": "A Sails, React & Webpack boilerplate",
   "engines": {
     "node": ">= 0.10.0",
     "npm": ">= 1.4.0"
   },
   "keywords": [
-    "sails",
-    "react",
-    "webpack",
-    "boilerplate"
+    "beam"
   ],
   "dependencies": {
     "@sailshq/lodash": "^3.10.3",
@@ -26,16 +23,17 @@
     "grunt-contrib-jst": "0.6.0",
     "grunt-contrib-uglify": "0.7.0",
     "grunt-sails-linker": "~0.10.1",
-    "grunt-sync": "0.2.4",
+    "grunt-sync": "^0.8.1",
     "include-all": "~0.1.6",
-    "rc": "1.0.1",
+    "rc": "^1.2.8",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
+    "react-i18next": "^11.2.7",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
-    "sails": "~1.0.2",
+    "sails": "^1.2.3",
     "sails-disk": "^1.0.1",
-    "webpack": "^4.8.3"
+    "webpack": "^4.20.2"
   },
   "scripts": {
     "start": "cross-env NODE_ENV=development nf start --wrap",
@@ -77,7 +75,7 @@
     "sinon": "^1.17.5",
     "style-loader": "^0.21.0",
     "uglifyjs-webpack-plugin": "^1.2.5",
-    "webpack-cli": "^2.1.3",
+    "webpack-cli": "^3.1.1",
     "webpack-dev-server": "^3.1.4"
   }
 }

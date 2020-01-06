@@ -13,4 +13,4 @@ ReactDom.render(
       <Route path="/" exact component={App} />
       <Route component={NotFound} />
     </Switch>
-  </Router>, document.getElementById('app')) 
+  </Router>, document.getElementById('app'));
