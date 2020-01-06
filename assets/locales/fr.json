@@ -5,6 +5,31 @@
       "clients" : "Clients",
       "devis" : "Devis",
       "factures" : "Factures"
+    },
+    "dashboard": {
+      "cards": {
+        "summary" : "Récapitulatif",
+        "stats" : "Statistiques",
+        "income" : "Revenues",
+        "taxes" : "Charges",
+        "profit" : "Bénéfice"
+      }
+    },
+    "form" : {
+      "email" : "Email",
+      "password" : "Mot de passe",
+      "validate" : "Valider",
+      "login" : "Connexion"
+    },
+    "validation" : {
+      "email": "Une adresse email valide est requise !",
+      "password": "Un mot de passe est requis !",
+      "server": {
+
+      }
+    },
+    "errors" : {
+      "error" : "Erreur"
     }
   }
 }

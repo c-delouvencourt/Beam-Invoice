@@ -5,6 +5,31 @@
       "clients" : "Clients",
       "devis" : "Estimates",
       "factures" : "Invoices"
+    },
+    "dashboard": {
+      "cards": {
+        "summary" : "Summary",
+        "stats" : "Stats",
+        "income" : "Sales",
+        "taxes" : "Taxes",
+        "profit" : "Net Income"
+      }
+    },
+    "form" : {
+      "email" : "Email",
+      "password" : "Password",
+      "validate" : "Validate",
+      "login" : "Login"
+    },
+    "validation" : {
+      "email": "An email address is required !",
+      "password": "A password is required !",
+      "server": {
+
+      }
+    },
+    "errors" : {
+      "error" : "Error"
     }
   }
 }

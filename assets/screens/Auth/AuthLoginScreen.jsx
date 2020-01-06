@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import "../../styles/auth.scss";
+import AuthFormLoginComponent from "../../components/Forms/Auth/AuthFormLoginComponent";
+import FormSelectLanguageInputComponent from "../../components/Forms/Inputs/FormSelectLanguageInputComponent";
 
 export default class AuthLoginScreen extends Component {
 
@@ -11,13 +13,17 @@ export default class AuthLoginScreen extends Component {
 
     return (
       <div className="login-background">
-        <div className="container">
           <div className="columns">
-            <div className="column is-6 m-t-50">
+            <div className="column is-4 is-offset-4 is-12-mobile is-offset-0-mobile center-content" style={{height: '100vh'}}>
               <img src={require('../../images/logo.png')} className={"login-auth"}/>
+              <div className="card m-t-20" style={{minWidth: 300}}>
+                <div className="card-content">
+                  <AuthFormLoginComponent/>
+                  <FormSelectLanguageInputComponent containerClassName={"m-t-10"}/>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
       </div>
     );
   }

@@ -1,5 +1,7 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import UserNavbar from "../components/User/UserNavbar";
+import DashboardAmountComponent from "../components/User/Dashboard/DashboardAmountComponent";
+import DashboardGraphComponent from "../components/User/Dashboard/DashboardGraphComponent";
 
 export default class DashboardScreen extends Component {
   constructor(props) {
@@ -9,10 +11,13 @@ export default class DashboardScreen extends Component {
   render() {
 
     return (
-      <div class="app">
+      <div className="app">
         <UserNavbar/>
-        <div class="container">
-
+        <div className="container is-fluid">
+          <div className="columns is-multiline">
+            <DashboardAmountComponent/>
+            <DashboardGraphComponent/>
+          </div>
         </div>
       </div>
     );

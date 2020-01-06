@@ -4,11 +4,13 @@ import { initReactI18next } from 'react-i18next';
 import fr from "./fr.json";
 import en from "./en.json";
 
+const languageDefault = localStorage.getItem("language");
+
 i18n
   .use(initReactI18next)
   .init({
     debug: true,
-    lng: 'fr',
+    lng: languageDefault == null ? "fr" : languageDefault,
     fallbackLng: 'fr',
     resources: {
       fr,
