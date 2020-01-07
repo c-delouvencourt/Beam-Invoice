@@ -13,8 +13,7 @@ ___
 
 <img src="https://i.imgur.com/1qDPHN4.png" align="left" style="border-radius: 5px"/>
 
-
-___
+<br>
 
 ### Get Started
 
