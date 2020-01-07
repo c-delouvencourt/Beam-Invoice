@@ -15,6 +15,18 @@
         "profit" : "Net Income"
       }
     },
+    "clients" : {
+      "filter" : "Filters",
+      "order" : "Order",
+      "search" : "Search a client...",
+      "since" : "Since...",
+      "hasfacture" : "Has at least one invoice ?",
+      "view" : "View",
+      "edit" : "Edit",
+      "delete" : "Delete",
+      "name" : "Name",
+      "date" : "Date"
+    },
     "form" : {
       "email" : "Email",
       "password" : "Password",

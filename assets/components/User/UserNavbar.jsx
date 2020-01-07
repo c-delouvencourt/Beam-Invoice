@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {withTranslation} from "react-i18next";
 import FormSelectLanguageInputComponent from "../Forms/Inputs/FormSelectLanguageInputComponent";
+import {Link} from "react-router-dom";
 
 class UserNavbar extends Component {
 
@@ -28,13 +29,13 @@ class UserNavbar extends Component {
 
         <div id="navbarBasicExample" className="navbar-menu">
           <div className="navbar-start">
-            <a className="navbar-item">
+            <Link to={"/"} className="navbar-item">
               {t('navbar.dashboard')}
-            </a>
+            </Link>
 
-            <a className="navbar-item">
+            <Link to={"/clients"} className="navbar-item">
               {t('navbar.clients')}
-            </a>
+            </Link>
 
             <a className="navbar-item">
               {t('navbar.devis')}

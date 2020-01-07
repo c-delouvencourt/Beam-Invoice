@@ -15,6 +15,18 @@
         "profit" : "Bénéfice"
       }
     },
+    "clients" : {
+      "filter" : "Filtres",
+      "order" : "Ordre",
+      "search" : "Rechercher un client...",
+      "since" : "Depuis...",
+      "hasfacture" : "A au moins une facture ?",
+      "view" : "Voir",
+      "edit" : "Modifier",
+      "delete" : "Supprimer",
+      "name" : "Nom",
+      "date" : "Date de création"
+    },
     "form" : {
       "email" : "Email",
       "password" : "Mot de passe",

@@ -9,20 +9,18 @@ export default class SplineChart extends React.Component {
         <AreaChart data={this.props.data}>
           <defs>
             <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8}/>
-              <stop offset="95%" stopColor="#82ca9d" stopOpacity={0}/>
+              <stop offset="5%" stopColor="#48c774" stopOpacity={0.8}/>
+              <stop offset="95%" stopColor="#48c774" stopOpacity={0}/>
             </linearGradient>
             <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#d59b9b" stopOpacity={0.8}/>
-              <stop offset="95%" stopColor="#d59b9b" stopOpacity={0}/>
+              <stop offset="5%" stopColor="#f14668" stopOpacity={0.8}/>
+              <stop offset="95%" stopColor="#f14668" stopOpacity={0}/>
             </linearGradient>
           </defs>
-          <XAxis dataKey="name"/>
-          <YAxis/>
-          <CartesianGrid strokeDasharray="3 3" vertical={false}/>
+          <XAxis dataKey="name" axisLine={false}/>
           <Tooltip/>
-          <Area type="monotone" dataKey="uv" stroke="#82ca9d" fillOpacity={1} fill="url(#colorUv)"/>
-          <Area type="monotone" dataKey="pv" stroke="#d59b9b" fillOpacity={1} fill="url(#colorPv)"/>
+          <Area type="monotone" dataKey="uv" stroke="#48c774" fillOpacity={1} fill="url(#colorUv)"/>
+          <Area type="monotone" dataKey="pv" stroke="#f14668" fillOpacity={1} fill="url(#colorPv)"/>
         </AreaChart>
       </ResponsiveContainer>
     );
