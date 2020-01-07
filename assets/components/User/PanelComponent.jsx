@@ -1,8 +1,5 @@
 import React, {Component} from 'react';
-import {withTranslation} from "react-i18next";
-import {Link} from "react-router-dom";
 import UserNavbar from "./UserNavbar";
-import SidebarComponent from "./SidebarComponent";
 
 class PanelComponent extends Component {
 
@@ -12,10 +9,12 @@ class PanelComponent extends Component {
 
   render() {
     return (
-      <div className="app">
+      <div className="columns">
         <UserNavbar/>
-        <div className="container is-fluid animated fadeIn" style={{animationDuration: '500ms'}}>
-          {this.props.children}
+        <div className="column is-11-desktop is-12-mobile margin-desktop">
+          <div className="container is-fluid animated fadeIn" style={{animationDuration: '500ms'}}>
+            {this.props.children}
+          </div>
         </div>
       </div>
     );
