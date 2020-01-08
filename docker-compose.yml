@@ -1,0 +1,50 @@
+version: '2'
+
+volumes:
+  postgres_data_dev: {}
+  postgres_backup_dev: {}
+
+services:
+  postgres:
+    build: ./.compose/postgres
+    volumes:
+      - postgres_data_dev:/var/lib/postgresql/data
+      - postgres_backup_dev:/backups
+    environment:
+      - POSTGRES_USER=beam
+
+  sails:
+    build:
+      context: .
+      dockerfile: ./.compose/sails/Dockerfile
+    command: /start-dev.sh
+    depends_on:
+      - postgres
+    environment:
+      - POSTGRES_USER=beam
+      - USE_DOCKER=yes
+    volumes:
+      - .:/app
+    ports:
+      - "3000:3000"
+    links:
+      - postgres
+
+  nginx:
+    image: nginx:1.15-alpine
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      - NGINX_SERVERNAME=beam.io
+    volumes:
+      - ./.compose/nginx:/etc/nginx/conf.d
+      - ./.compose/certbot/conf:/etc/letsencrypt
+      - ./.compose/certbot/www:/var/www/certbot
+    command: /bin/bash -c "envsubst < /etc/nginx/conf.d/mysite.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"
+  certbot:
+    image: certbot/certbot
+    volumes:
+      - ./.compose/certbot/conf:/etc/letsencrypt
+      - ./.compose/certbot/www:/var/www/certbot
+    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"

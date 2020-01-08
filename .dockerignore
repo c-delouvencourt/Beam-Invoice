@@ -1,0 +1,10 @@
+.idea
+*.iml
+out
+gen
+.git
+
+*Dockerfile*
+*docker-compose*
+
+node_modules
