@@ -8,6 +8,7 @@
     },
     "dashboard": {
       "cards": {
+        "lastinvoice" : "Dernières factures",
         "summary" : "Récapitulatif",
         "stats" : "Statistiques",
         "income" : "Revenues",

@@ -1,0 +1,21 @@
+.header-dashboard{
+  background: white;
+  width: 100%;
+  height: 400px;
+  padding: 40px;
+  border-radius: 0 0 20px 20px;
+  margin-top: -50px;
+  -webkit-box-shadow: 0px 0px 26px 0px rgba(0,0,0,0.07);
+  -moz-box-shadow: 0px 0px 26px 0px rgba(0,0,0,0.07);
+  box-shadow: 0px 0px 26px 0px rgba(0,0,0,0.07);
+}
+
+.stat-badge{
+  background: #f1f1f1;
+  width: 20px !important;
+  height: 20px;
+  border-radius: 50px;
+  padding: 5px 11px;
+  margin-right: 10px;
+  font-size: 15px;
+}

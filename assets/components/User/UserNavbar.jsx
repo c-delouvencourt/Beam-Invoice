@@ -5,6 +5,7 @@ import "../../styles/sidebar.scss";
 import {withTranslation} from "react-i18next";
 import FormSelectLanguageInputComponent from "../Forms/Inputs/FormSelectLanguageInputComponent";
 import {Link} from "react-router-dom";
+import FormSelectLanguageSmallInputComponent from "../Forms/Inputs/FormSelectLanguageSmallInputComponent";
 
 class UserNavbar extends Component {
 
@@ -88,6 +89,7 @@ class UserNavbar extends Component {
             </Link>
           </div>
           <div className="end-sidebar">
+            <FormSelectLanguageSmallInputComponent/>
             <Link to={"/clients"}>
               <figure className="image is-32x32">
                 <img className="is-rounded" src="https://bulma.io/images/placeholders/128x128.png"/>

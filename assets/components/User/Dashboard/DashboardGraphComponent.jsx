@@ -13,7 +13,7 @@ class DashboardGraphComponent extends Component {
     const {t} = this.props;
 
     return (
-      <DashboardCardComponent title={t('dashboard.cards.stats')} height={400} size={9}>
+      <DashboardCardComponent title={t('dashboard.cards.stats')} height={400} size={3}>
         <SplineChart width={400} height={350} data={[ {
           name: 'Page A', uv: 4000, pv: 2400, amt: 2400,
         },
