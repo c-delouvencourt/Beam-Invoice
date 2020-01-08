@@ -35,20 +35,20 @@
     }
   }
 
-  .right-sidebar{
+  .end-sidebar{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    a {
+    .sidebar-link {
       font-size: 1.5rem;
       color: #cbcbcb;
-      margin-bottom: 20px;
+      margin-top: 20px;
       transition: all 0.2s ease;
     }
 
-    a:hover, .is-active{
+    .sidebar-link:hover, .is-active{
       color: #3c4bdf;
     }
   }

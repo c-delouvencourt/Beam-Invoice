@@ -14,7 +14,6 @@ class DashboardAmountComponent extends Component {
     return (
       <div className="columns is-multiline">
         <div className="column is-12">
-          <h5 className="title is-5" style={{marginBottom: 50}}>{t('dashboard.cards.stats')}</h5>
           <h5 className="title is-5 is-uppercase" style={{color: "rgb(154, 154, 154)", fontSize: 14}}>{t('dashboard.cards.profit')}</h5>
           <h2 className="subtitle is-2 is-uppercase has-text-weight-light has-text-primary" >{StringUtils.formatPrice(270000)}</h2>
         </div>

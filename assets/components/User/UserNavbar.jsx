@@ -6,6 +6,9 @@ import {withTranslation} from "react-i18next";
 import FormSelectLanguageInputComponent from "../Forms/Inputs/FormSelectLanguageInputComponent";
 import {Link} from "react-router-dom";
 import FormSelectLanguageSmallInputComponent from "../Forms/Inputs/FormSelectLanguageSmallInputComponent";
+import 'bulma-extensions/bulma-tooltip/dist/css/bulma-tooltip.min.css';
+import StatusUtils from "../../utils/StatusUtils";
+import {withRouter} from "react-router";
 
 class UserNavbar extends Component {
 
@@ -71,17 +74,20 @@ class UserNavbar extends Component {
             <img className="logo" src={require('../../images/logo_small.png')}/>
           </Link>
           <div className="center-sidebar">
-            <Link to={"/"}>
+            <Link to={"/"} className={StatusUtils.isActiveUrl("/", this.props.location.pathname, "tooltip is-tooltip-right")} data-tooltip={t('navbar.dashboard')}>
               <i className="fas fa-tachometer-alt"></i>
             </Link>
-            <Link to={"/clients"} className="is-active">
+            <Link to={"/clients"} className={StatusUtils.isActiveUrl("/clients", this.props.location.pathname, "tooltip is-tooltip-right")} data-tooltip={t('navbar.clients')}>
               <i className="fas fa-users"></i>
             </Link>
-            <Link to={"/clients"}>
+            <Link to={"/devis"} className={StatusUtils.isActiveUrl("/devis", this.props.location.pathname, "tooltip is-tooltip-right")} data-tooltip={t('navbar.devis')}>
               <i className="fas fa-receipt"></i>
             </Link>
-            <Link to={"/clients"}>
+            <Link to={"/factures"} className={StatusUtils.isActiveUrl("/factures", this.props.location.pathname, "tooltip is-tooltip-right")} data-tooltip={t('navbar.factures')}>
               <i className="fas fa-file-invoice"></i>
+            </Link>
+            <Link to={"/taxes"} className={StatusUtils.isActiveUrl("/taxes", this.props.location.pathname, "tooltip is-tooltip-right")} data-tooltip={t('navbar.taxes')}>
+              <i className="fas fa-money-check"></i>
             </Link>
             <hr className="separator"/>
             <Link to={"/clients"}>
@@ -90,7 +96,7 @@ class UserNavbar extends Component {
           </div>
           <div className="end-sidebar">
             <FormSelectLanguageSmallInputComponent/>
-            <Link to={"/clients"}>
+            <Link to={"/login"} className="sidebar-link">
               <figure className="image is-32x32">
                 <img className="is-rounded" src="https://bulma.io/images/placeholders/128x128.png"/>
               </figure>
@@ -102,4 +108,4 @@ class UserNavbar extends Component {
   }
 }
 
-export default withTranslation()(UserNavbar);
+export default withTranslation()(withRouter(UserNavbar));

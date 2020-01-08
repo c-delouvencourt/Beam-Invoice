@@ -1,12 +1,20 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import "../../styles/app.scss";
 
 export default class NotFound extends Component {
   render() {
     return (
-      <section>
-        <h2 ref="title">404. Not found.</h2>
-        <Link to="/">Go to index</Link>
+      <section className="hero">
+        <div className="hero-body">
+          <div className="container">
+            <h1 className="title">
+              404
+            </h1>
+            <h2 className="subtitle">
+              Error
+            </h2>
+          </div>
+        </div>
       </section>
     );
   }

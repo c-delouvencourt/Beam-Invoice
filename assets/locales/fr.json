@@ -4,9 +4,11 @@
       "dashboard" : "Tableau de Bord",
       "clients" : "Clients",
       "devis" : "Devis",
-      "factures" : "Factures"
+      "factures" : "Factures",
+      "taxes" : "Dépenses"
     },
     "dashboard": {
+      "hello": "Bonjour",
       "cards": {
         "lastinvoice" : "Dernières factures",
         "summary" : "Récapitulatif",
@@ -26,7 +28,9 @@
       "edit" : "Modifier",
       "delete" : "Supprimer",
       "name" : "Nom",
-      "date" : "Date de création"
+      "date" : "Date de création",
+      "actions" : "Action",
+      "create" : "Créer un client"
     },
     "form" : {
       "email" : "Email",

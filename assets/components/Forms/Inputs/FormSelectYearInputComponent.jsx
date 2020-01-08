@@ -3,7 +3,7 @@ import FormUtils from "../../../utils/FormUtils";
 import {withTranslation} from "react-i18next";
 import LanguageUtils from "../../../utils/LanguageUtils";
 
-class FormSelectLanguageSmallInputComponent extends Component {
+class FormSelectYearInputComponent extends Component {
 
   constructor(props) {
     super(props);
@@ -14,32 +14,31 @@ class FormSelectLanguageSmallInputComponent extends Component {
   }
 
   render() {
-    const { t, i18n } = this.props;
+    const { t } = this.props;
 
     return (
-      <div className={"dropdown is-up " +
-      "is-active " + this.props.containerClassName}>
+      <div className={"dropdown " +
+      "is-active " + this.props.containerClassName} style={{marginTop: -10}}>
         <div className="dropdown-trigger">
-          <button className="button" style={{borderRadius: 50}} aria-haspopup="true" aria-controls="dropdown-menu" onClick={() => this.setState({active: !this.state.active})}>
-            <img src={LanguageUtils.getImage(i18n.language)} style={{height: 20}}/>
+          <button className="button" style={{borderRadius: 50, border: 'none'}} aria-haspopup="true" aria-controls="dropdown-menu" onClick={() => this.setState({active: !this.state.active})}>
+            <p className="has-text-weight-semibold">2020</p>
+            <span className="icon is-small has-text-primary" style={{marginLeft: 0}}>
+              <i className="fas fa-angle-down" aria-hidden="true"></i>
+            </span>
           </button>
         </div>
         {this.state.active && (
           <div className="dropdown-menu animated fadeIn" style={{animationDuration: '500ms'}} id="dropdown-menu" role="menu">
             <div className="dropdown-content">
               <a onClick={() => {
-                i18n.changeLanguage("fr");
-                localStorage.setItem("language", "fr");
                 this.setState({active: false});
               }} className="dropdown-item">
-                <img src={LanguageUtils.getImage("fr")} style={{height: 11}}/> {LanguageUtils.getTitle("fr")}
+                {"2019"}
               </a>
               <a onClick={() => {
-                i18n.changeLanguage("en");
-                localStorage.setItem("language", "en");
                 this.setState({active: false});
               }} className="dropdown-item">
-                <img src={LanguageUtils.getImage("en")} style={{height: 11}}/> {LanguageUtils.getTitle("en")}
+                {"2020"}
               </a>
             </div>
           </div>
@@ -49,4 +48,4 @@ class FormSelectLanguageSmallInputComponent extends Component {
   }
 }
 
-export default withTranslation()(FormSelectLanguageSmallInputComponent);
+export default withTranslation()(FormSelectYearInputComponent);

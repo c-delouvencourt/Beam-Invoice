@@ -225,6 +225,10 @@ html, body {
   width: 100%;
 }
 
+.button.is-focused:not(:active), .button:focus:not(:active) {
+  box-shadow: none;
+}
+
 // Tables
 
 .table thead td, .table thead th {

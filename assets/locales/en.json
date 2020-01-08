@@ -4,9 +4,11 @@
       "dashboard" : "Dashboard",
       "clients" : "Clients",
       "devis" : "Estimates",
-      "factures" : "Invoices"
+      "factures" : "Invoices",
+      "taxes" : "Expenses"
     },
     "dashboard": {
+      "hello": "Hello",
       "cards": {
         "summary" : "Summary",
         "stats" : "Stats",
@@ -25,7 +27,9 @@
       "edit" : "Edit",
       "delete" : "Delete",
       "name" : "Name",
-      "date" : "Date"
+      "date" : "Date",
+      "actions" : "Action",
+      "create" : "Create a client"
     },
     "form" : {
       "email" : "Email",
