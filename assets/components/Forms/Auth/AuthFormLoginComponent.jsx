@@ -6,6 +6,8 @@ import i18n from "../../../locales/i18n";
 import {withTranslation} from "react-i18next";
 import Loading from "../../Loading";
 import FormPasswordInputComponent from "../Inputs/FormPasswordInputComponent";
+import APIAuth from "../../../api/services/APIAuth";
+import HandleBeamAPI from "../../../api/HandleBeamAPI";
 
 const ValidationSchema = Yup.object().shape({
   email: Yup.string()
@@ -35,8 +37,15 @@ class AuthFormLoginComponent extends Component {
         <Formik
           initialValues={{email: '', password: ''}}
           onSubmit={(values, actions) => {
-            console.log(values);
             this.setState({loading: true});
+
+            APIAuth.login(values.email, values.password).then(r => HandleBeamAPI.handleWithError(r, (r) => {
+              this.setState({loading: false});
+              actions.setSubmitting(false);
+              actions.setStatus({ msg: t(r.data.message) });
+            })).then(data => {
+              localStorage.setItem("user-jwt", data.jwt)
+            }).catch(e => HandleBeamAPI.error(e));
           }}
           validationSchema={ValidationSchema}
           render={({

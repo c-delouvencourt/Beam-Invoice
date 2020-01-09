@@ -10,12 +10,14 @@ import NotFound from 'components/NotFound/NotFound';
 import DashboardScreen from "./screens/DashboardScreen";
 import AuthLoginScreen from "./screens/Auth/AuthLoginScreen";
 import ClientsScreen from "./screens/ClientsScreen";
+import LoadingScreen from "./screens/LoadingScreen";
 
 ReactDom.render(
   <Router>
     <Switch>
       <Route path="/" exact component={DashboardScreen} />
 
+      <Route path="/loading" exact component={LoadingScreen} />
       <Route path="/login" exact component={AuthLoginScreen} />
 
       <Route path="/clients" exact component={ClientsScreen} />

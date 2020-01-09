@@ -1,51 +1,67 @@
 {
   "translation": {
     "navbar": {
-      "dashboard" : "Dashboard",
-      "clients" : "Clients",
-      "devis" : "Estimates",
-      "factures" : "Invoices",
-      "taxes" : "Expenses"
+      "dashboard": "Dashboard",
+      "clients": "Clients",
+      "devis": "Estimates",
+      "factures": "Invoices",
+      "taxes": "Expenses"
     },
     "dashboard": {
       "hello": "Hello",
       "cards": {
-        "summary" : "Summary",
-        "stats" : "Stats",
-        "income" : "Sales",
-        "taxes" : "Taxes",
-        "profit" : "Net Income"
+        "summary": "Summary",
+        "stats": "Stats",
+        "income": "Sales",
+        "taxes": "Taxes",
+        "profit": "Net Income"
       }
     },
-    "clients" : {
-      "filter" : "Filters",
-      "order" : "Order",
-      "search" : "Search a client...",
-      "since" : "Since...",
-      "hasfacture" : "Has at least one invoice ?",
-      "view" : "View",
-      "edit" : "Edit",
-      "delete" : "Delete",
-      "name" : "Name",
-      "date" : "Date",
-      "actions" : "Action",
-      "create" : "Create a client"
+    "clients": {
+      "filter": "Filters",
+      "order": "Order",
+      "search": "Search a client...",
+      "since": "Since...",
+      "hasfacture": "Has at least one invoice ?",
+      "view": "View",
+      "edit": "Edit",
+      "delete": "Delete",
+      "name": "Name",
+      "date": "Date",
+      "actions": "Action",
+      "create": "Create a client"
     },
-    "form" : {
-      "email" : "Email",
-      "password" : "Password",
-      "validate" : "Validate",
-      "login" : "Login"
+    "form": {
+      "email": "Email",
+      "password": "Password",
+      "validate": "Validate",
+      "login": "Login"
     },
-    "validation" : {
+    "validation": {
       "email": "An email address is required !",
       "password": "A password is required !",
       "server": {
-
       }
     },
-    "errors" : {
-      "error" : "Error"
+    "errors": {
+      "error": "Error"
+    },
+    "api": {
+      "responses": {
+        "E_AUTH_NO_REGISTERED": "You are not registered !",
+        "E_AUTH_NO_USER": "User with given email doesn't exist !",
+        "E_AUTH_CANT_REGISTER": "Can't add the user !",
+        "E_AUTH_ALREADY_REGISTERED": "The user has already been added !",
+        "E_AUTH_SESSION_EXPIRATION": "Your session has expired, please reconnect!",
+        "E_DB_ERROR": "A database error occurred!",
+        "E_CANT_UPLOAD": "Unable to send file, please try again !",
+        "E_NO_PERMISSION": "You do not have permission to do that !",
+        "E_NO_PERMISSION_ADMIN": "You do not have permission to do that !",
+        "E_ROUTES_ERROR": "An error has occurred, please try again !",
+        "E_INVALID_REQUEST": "Invalid request !",
+        "E_MODEL_NO_ENTRY": "No entry in the database !",
+        "E_ALREADY_REQUESTED_IP": "You have already made a request, please try again later !"
+      }
     }
   }
 }

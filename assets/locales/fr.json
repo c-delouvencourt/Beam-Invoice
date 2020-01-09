@@ -47,6 +47,23 @@
     },
     "errors" : {
       "error" : "Erreur"
+    },
+    "api" : {
+      "responses" : {
+        "E_AUTH_NO_REGISTERED" : "Vous n'êtes pas inscrit !",
+        "E_AUTH_NO_USER" : "Aucun utilisateur ne correspond !",
+        "E_AUTH_CANT_REGISTER" : "Impossible d'ajouter l'utilisateur !",
+        "E_AUTH_ALREADY_REGISTERED" : "L'utilisateur a déjà été ajouté !",
+        "E_AUTH_SESSION_EXPIRATION" : "Votre session a expiré, veuillez vous reconnecter !",
+        "E_DB_ERROR" : "Une erreur de base de donnée s'est produite !",
+        "E_CANT_UPLOAD" : "Impossible d'envoyer le fichier, veuillez recommencer !",
+        "E_NO_PERMISSION" : "Vous n'avez pas les permissions de faire ça !",
+        "E_NO_PERMISSION_ADMIN" : "Vous n'avez pas les permissions de faire ça !",
+        "E_ROUTES_ERROR" : "Une erreur s'est produite, veuillez réessayer !",
+        "E_INVALID_REQUEST" : "La requête est invalide !",
+        "E_MODEL_NO_ENTRY" : "Aucune entrée de ce type dans la base de donnée !",
+        "E_ALREADY_REQUESTED_IP" : "Vous avez déjà fait une demande, veuillez réessayer plus tard !"
+      }
     }
   }
 }

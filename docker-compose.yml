@@ -1,50 +1,54 @@
-version: '2'
-
-volumes:
-  postgres_data_dev: {}
-  postgres_backup_dev: {}
+version: '3.3'
 
 services:
-  postgres:
-    build: ./.compose/postgres
-    volumes:
-      - postgres_data_dev:/var/lib/postgresql/data
-      - postgres_backup_dev:/backups
-    environment:
-      - POSTGRES_USER=beam
 
-  sails:
+  node:
     build:
-      context: .
-      dockerfile: ./.compose/sails/Dockerfile
-    command: /start-dev.sh
-    depends_on:
-      - postgres
-    environment:
-      - POSTGRES_USER=beam
-      - USE_DOCKER=yes
+      context: ./node
+      args:
+        - NODE_VERSION=latest
+        - PROJECT_PATH=/opt/app/
+        - NODE_ENV=production
+        - PORT=3000
+        - YARN=false
     volumes:
-      - .:/app
-    ports:
-      - "3000:3000"
-    links:
-      - postgres
+      - ../:/opt/app
+    entrypoint: run-nodock "npm start"
+    tty: true
+
+  postgresql:
+    build:
+      context: ./postgresql
+      args:
+        - POSTGRES_USER=beam
+        - POSTGRES_PASSWORD=beambadaboum
+        - POSTGRES_DB=beam
+    volumes:
+      - ./data/postgresql/:/var/lib/postgresql
+    expose:
+      - "5432"
 
   nginx:
-    image: nginx:1.15-alpine
+    build:
+      context: ./nginx
+      args:
+        - WEB_REVERSE_PROXY_PORT=3000
+        - WEB_SSL=false
+        - SELF_SIGNED=false
+        - NO_DEFAULT=false
+    volumes:
+      - ./data/logs/nginx/:/var/log/nginx
+      - ./certbot/certs/:/var/certs
     ports:
       - "80:80"
       - "443:443"
-    environment:
-      - NGINX_SERVERNAME=beam.io
-    volumes:
-      - ./.compose/nginx:/etc/nginx/conf.d
-      - ./.compose/certbot/conf:/etc/letsencrypt
-      - ./.compose/certbot/www:/var/www/certbot
-    command: /bin/bash -c "envsubst < /etc/nginx/conf.d/mysite.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"
+    tty: true
+
   certbot:
-    image: certbot/certbot
+    build:
+      context: ./.compose/certbot
+    links:
+      - nginx
     volumes:
-      - ./.compose/certbot/conf:/etc/letsencrypt
-      - ./.compose/certbot/www:/var/www/certbot
-    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
+      - ./certbot/letsencrypt/:/var/www/letsencrypt
+      - ./certbot/certs/:/var/certs
