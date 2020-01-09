@@ -1,4 +1,4 @@
 {
-  "presets": ["env", "react"],
+  "presets": ["es2015", "stage-0", "react"],
   "plugins": ["react-hot-loader/babel", "transform-runtime", "react-html-attrs"]
 }

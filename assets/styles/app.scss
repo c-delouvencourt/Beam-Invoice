@@ -60,7 +60,7 @@ html, body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #333;
+  background-color: #1e2dbe;
   -webkit-animation: sk-foldCubeAngle 2.4s infinite linear both;
   animation: sk-foldCubeAngle 2.4s infinite linear both;
   -webkit-transform-origin: 100% 100%;
@@ -68,14 +68,17 @@ html, body {
   transform-origin: 100% 100%;
 }
 .sk-folding-cube .sk-cube2 {
+  background: #b439c8;
   -webkit-transform: scale(1.1) rotateZ(90deg);
   transform: scale(1.1) rotateZ(90deg);
 }
 .sk-folding-cube .sk-cube3 {
+  background: #3c4bdf;
   -webkit-transform: scale(1.1) rotateZ(180deg);
   transform: scale(1.1) rotateZ(180deg);
 }
 .sk-folding-cube .sk-cube4 {
+  background: #8e64ff;
   -webkit-transform: scale(1.1) rotateZ(270deg);
   transform: scale(1.1) rotateZ(270deg);
 }

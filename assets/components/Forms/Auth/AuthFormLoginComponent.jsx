@@ -67,7 +67,7 @@ class AuthFormLoginComponent extends Component {
                     <button className="delete" aria-label="delete"/>
                   </div>
                   <div className="message-body">
-                    Vous êtes désormais inscris sur Estim.io, vous serez redirigé dans 3 secondes.
+                    Vous êtes désormais connecté sur Beam, vous serez redirigé dans 3 secondes.
                   </div>
                 </article>
               ) : this.state.loading ? (
@@ -80,7 +80,7 @@ class AuthFormLoginComponent extends Component {
                       <button className="delete" aria-label="delete"/>
                     </div>
                     <div className="message-body">
-                      {t('validation.server.' + status.msg)}
+                      {status.msg}
                     </div>
                   </article>}
 

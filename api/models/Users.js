@@ -5,6 +5,8 @@
  * @docs        :: https://sailsjs.com/docs/concepts/models-and-orm/models
  */
 
+var bcrypt = require("bcryptjs");
+
 module.exports = {
   attributes: {
     //  ╔═╗╦═╗╦╔╦╗╦╔╦╗╦╦  ╦╔═╗╔═╗
@@ -50,6 +52,11 @@ module.exports = {
       defaultsTo: false
     },
 
+    password: {
+      type: 'string',
+      description: 'Mot de passe de l\'utilisateur.',
+    },
+
     apiToken: {
       type: 'string',
       description: 'API Token de l\'utilisateur.',
@@ -81,8 +88,16 @@ module.exports = {
   },
 
   customToJSON: function() {
-    return _.omit(this, ['apiToken'])
+    return _.omit(this, ['apiToken', 'password'])
   },
+
+  beforeCreate: function(values, cb) {
+    bcrypt.hash(values.password, 10, function(err, hash) {
+      if (err) return cb(err);
+      values.password = hash;
+      cb();
+    });
+  }
 
 };
 

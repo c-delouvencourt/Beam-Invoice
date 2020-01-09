@@ -4,6 +4,11 @@ module.exports = {
     type: 1,
     code: "E_AUTH_NO_REGISTERED"
   },
+  INVALID_PASSWORD: {
+    error: true,
+    type: 1,
+    code: "E_AUTH_INVALID_PASSWORD"
+  },
   NO_USER: {
     error: true,
     type: 1,

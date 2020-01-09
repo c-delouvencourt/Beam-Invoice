@@ -15,7 +15,7 @@
     "algolia-places-react": "^1.5.1",
     "assets-webpack-plugin": "^3.4.0",
     "axios": "^0.19.0",
-    "bcrypt": "^3.0.7",
+    "bcryptjs": "^2.4.3",
     "bulma-extensions": "^6.2.7",
     "colors": "^1.1.2",
     "ejs": "^2.5.5",
@@ -49,7 +49,7 @@
     "redux-thunk": "^2.3.0",
     "sails": "^1.2.3",
     "sails-disk": "^1.0.1",
-    "sails-hook-swagger-generator": "^2.9.0",
+    "sails-hook-req-validate": "^2.7.1",
     "styled-components": "^4.4.1",
     "webpack": "^4.20.2",
     "yup": "^0.28.0"

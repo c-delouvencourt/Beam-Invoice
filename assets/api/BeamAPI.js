@@ -19,7 +19,7 @@ export default class BeamAPI {
 
 
     if (url === "") throw new Error("Please specify an url to api endpoint.");
-    this._url = "/api/" + url;
+    this._url = "/api" + url;
     this._needAPIKey = needAPIKey;
   }
 
@@ -31,7 +31,7 @@ export default class BeamAPI {
    * @returns {EstimIOAPI}
    */
   static url(url, needAPIKey = false) {
-    return new EstimIOAPI(url, needAPIKey);
+    return new BeamAPI(url, needAPIKey);
   }
 
   contentJson() {

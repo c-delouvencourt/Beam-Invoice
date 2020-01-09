@@ -51,6 +51,7 @@
     "api" : {
       "responses" : {
         "E_AUTH_NO_REGISTERED" : "Vous n'êtes pas inscrit !",
+        "E_AUTH_INVALID_PASSWORD": "Aucun compte ne correspond à ces identifiants !",
         "E_AUTH_NO_USER" : "Aucun utilisateur ne correspond !",
         "E_AUTH_CANT_REGISTER" : "Impossible d'ajouter l'utilisateur !",
         "E_AUTH_ALREADY_REGISTERED" : "L'utilisateur a déjà été ajouté !",

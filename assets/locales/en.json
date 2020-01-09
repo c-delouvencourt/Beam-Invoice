@@ -49,6 +49,7 @@
     "api": {
       "responses": {
         "E_AUTH_NO_REGISTERED": "You are not registered !",
+        "E_AUTH_INVALID_PASSWORD": "Your password is invalid !",
         "E_AUTH_NO_USER": "User with given email doesn't exist !",
         "E_AUTH_CANT_REGISTER": "Can't add the user !",
         "E_AUTH_ALREADY_REGISTERED": "The user has already been added !",
