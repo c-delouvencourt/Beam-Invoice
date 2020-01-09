@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import "../../styles/auth.scss";
 import AuthFormLoginComponent from "../../components/Forms/Auth/AuthFormLoginComponent";
 import FormSelectLanguageInputComponent from "../../components/Forms/Inputs/FormSelectLanguageInputComponent";
+import APIAuth from "../../api/services/APIAuth";
 
 export default class AuthLoginScreen extends Component {
 
@@ -10,7 +11,6 @@ export default class AuthLoginScreen extends Component {
   }
 
   render() {
-
     return (
       <div className="login-background">
           <div className="columns">
