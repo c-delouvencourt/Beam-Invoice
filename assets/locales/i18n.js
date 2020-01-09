@@ -9,7 +9,7 @@ const languageDefault = localStorage.getItem("language");
 i18n
   .use(initReactI18next)
   .init({
-    debug: true,
+    debug: false,
     lng: languageDefault == null ? "fr" : languageDefault,
     fallbackLng: 'fr',
     resources: {
