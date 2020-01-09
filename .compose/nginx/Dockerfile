@@ -1,18 +1,23 @@
-FROM node:latest
+FROM nginx:1.11
 
-RUN npm install -g sails grunt npm-check-updates foreman
+RUN mkdir /etc/nginx/sites-available && rm /etc/nginx/conf.d/default.conf
+ADD nginx.conf /etc/nginx/
 
-COPY ./package.json /package.json
-RUN npm install
+COPY scripts /root/scripts/
+COPY certs /etc/ssl/
 
-COPY ./.compose/sails/entrypoint.sh /entrypoint.sh
-RUN sed -i 's/\r//' /entrypoint.sh
-RUN chmod +x /entrypoint.sh
+COPY sites /etc/nginx/templates
 
-COPY ./.compose/sails/start-dev.sh /start-dev.sh
-RUN sed -i 's/\r//' /start-dev.sh
-RUN chmod +x /start-dev.sh
+ARG WEB_REVERSE_PROXY_PORT=3000
+ARG WEB_SSL=false
+ARG SELF_SIGNED=false
+ARG NO_DEFAULT=false
 
-WORKDIR /app
+ENV WEB_REVERSE_PROXY_PORT=$WEB_REVERSE_PROXY_PORT
+ENV WEB_SSL=$WEB_SSL
+ENV SELF_SIGNED=$SELF_SIGNED
+ENV NO_DEFAULT=$NO_DEFAULT
 
-ENTRYPOINT ["/entrypoint.sh"]
+RUN /bin/bash /root/scripts/build-nginx.sh
+
+CMD nginx
