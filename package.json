@@ -47,6 +47,7 @@
     "redux-thunk": "^2.3.0",
     "sails": "^1.2.3",
     "sails-disk": "^1.0.1",
+    "sails-hook-swagger-generator": "^2.9.0",
     "styled-components": "^4.4.1",
     "webpack": "^4.20.2",
     "yup": "^0.28.0"
