@@ -1,3 +1,4 @@
+import 'styles/bulma.css';
 import 'styles/app.scss';
 
 import React from 'react';

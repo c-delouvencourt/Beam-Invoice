@@ -17,10 +17,10 @@ module.exports = function APIResponse(error, pagination, data) {
   if (error.type === 2) sails.log.warn('[' + error.code + '] ' + error.message);
   if (error.type === 1) sails.log.info('[' + error.code + '] ' + error.message);
 
-  return res.status(200).set({"x-powered-by": "Beam <beam@nocturne.app>"}).json({
+  return res.json({
     error: error.error,
     code: error.code,
-    message: "api.responses." + error.message,
+    message: "api.responses." + error.code,
     pagination: pagination,
     data: data
   });
