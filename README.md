@@ -58,7 +58,7 @@ ___
 ### :round_pushpin: Translate
 Help us translate or suggest changes to existing languages if you find any mistakes.
 
-**Here's the  locales files :** (https://github.com/PHClement/Beam-Invoice/blob/master/assets/locales/).
+**Here's the  localization platform :** (https://poeditor.com/join/project/zjrG5XDl4i).
 
 ---
 
