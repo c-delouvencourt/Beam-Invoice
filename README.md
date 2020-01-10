@@ -1,3 +1,4 @@
+
 <a href="https://lab.nocturne.app"><img src="https://i.imgur.com/oDFGauE.png" align="left" height="66" width="174"/></a>      
 
 
@@ -11,18 +12,35 @@
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/clementdlc)
 
 ![Screenshot](https://i.imgur.com/1qDPHN4.png)
+___
 
+### :rocket: Features
+
+Soon...
 ___
 
 ### :cloud: Installation
 
-```shell
-soon
+#### Requirements:
+```
+NodeJS
+PostgreSQL server
 ```
 
+**Only one step :**
+```shell
+npm run-script lift
+```
+### :pencil: Production start
+
+Webpack builds the bundle files on `postinstall` and Beam is lifted the same way it's always lifted in production:
+
+```shell
+npm run dist
+```
 ___
 
-### :pencil: Run (development)
+### :computer: Development
 
 There are multiple ways to run the project in development as sails and webpack-dev-server run independently. The easiest way is to use [Foreman](https://github.com/theforeman/foreman) (`npm install -g foreman`) and run:
 
@@ -37,18 +55,15 @@ The alternative is to manually run each process in separate terminal windows.
 To view Beam app, go to `http://localhost:3000` in your browser.
 ___
 
-### :pencil: Run (Production)
+### :round_pushpin: Translate
+Help us translate or suggest changes to existing languages if you find any mistakes.
 
-Webpack builds the bundle files on `postinstall` and Beam is lifted the same way it's always lifted in production:
+**Here's the  locales files :** (https://github.com/PHClement/Beam-Invoice/blob/master/assets/locales/).
 
-```shell
-sails lift --prod
-```
+### :mag_right: Credits
 
-You can also manually run webpack with `npm run dist`.
+Beam is a product of  [NocturneLab](https://github.com/PHClement)
 
-___
+**Special thanks to:**
 
-### Features
-
-Soon...
+-   *Your name here ?*
