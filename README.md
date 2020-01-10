@@ -60,6 +60,8 @@ Help us translate or suggest changes to existing languages if you find any mista
 
 **Here's the  locales files :** (https://github.com/PHClement/Beam-Invoice/blob/master/assets/locales/).
 
+---
+
 ### :mag_right: Credits
 
 Beam is a product of  [NocturneLab](https://github.com/PHClement)
