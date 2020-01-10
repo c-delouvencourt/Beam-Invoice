@@ -2,7 +2,7 @@
   "name": "beam-cli",
   "version": "1.0.0",
   "description": "Config beam project",
-  "main": "cli.js",
+  "main": "",
   "scripts": {
     "test": "npm test"
   },

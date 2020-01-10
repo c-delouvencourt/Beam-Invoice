@@ -8,14 +8,14 @@
 
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/clementdlc)
 ___
 
-<img src="https://i.imgur.com/1qDPHN4.png" align="left" style="border-radius: 5px"/>
+<img src="https://i.imgur.com/1qDPHN4.png" align="left" style="border-radius: 5px; margin-bottom: 15px"/>
 
 <br>
 
-### Get Started
+## :cloud: Installation
 
 ```shell
 soon
