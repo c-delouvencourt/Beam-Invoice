@@ -3,10 +3,10 @@
     "host": "localhost",
     "user": "user",
     "password": "password",
-    "port": "5432",
+    "port": 5432,
     "database": "beam"
   },
   "jwt": {
-    "key": "PLEASE CHANGE THIS !"
+    "key": "c3e1d3a7-9419-40b3-a921-d4f227b97d0a"
   }
 }

@@ -1,3 +1,5 @@
+const configJSON = require('../config.json');
+
 /**
  * Connections
  * (sails.config.connections)
@@ -76,10 +78,11 @@ module.exports.connections = {
   ***************************************************************************/
   somePostgresqlServer: {
     adapter: 'sails-postgresql',
-    host: 'YOUR_POSTGRES_SERVER_HOSTNAME_OR_IP_ADDRESS',
-    user: 'YOUR_POSTGRES_USER',
-    password: 'YOUR_POSTGRES_PASSWORD',
-    database: 'YOUR_POSTGRES_DB'
+    host: configJSON.postgresql.host,
+    user: configJSON.postgresql.user,
+    password: configJSON.postgresql.password,
+    database: configJSON.postgresql.database,
+    port: configJSON.postgresql.port
   }
 
 

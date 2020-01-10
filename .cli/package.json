@@ -4,6 +4,7 @@
   "description": "Config beam project",
   "main": "",
   "scripts": {
+    "start": "node cli.js",
     "test": "npm test"
   },
   "repository": {
@@ -23,6 +24,8 @@
     "chalk": "^3.0.0",
     "configstore": "^5.0.0",
     "edit-json-file": "^1.4.0",
+    "figlet": "^1.2.4",
+    "inquirer": "^7.0.3",
     "progress": "^2.0.3",
     "prompt": "^1.0.0",
     "signale": "^1.4.0",

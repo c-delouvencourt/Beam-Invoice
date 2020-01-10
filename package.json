@@ -50,12 +50,13 @@
     "sails": "^1.2.3",
     "sails-disk": "^1.0.1",
     "sails-hook-req-validate": "^2.7.1",
+    "sails-postgresql": "^1.0.2",
     "styled-components": "^4.4.1",
     "webpack": "^4.20.2",
     "yup": "^0.28.0"
   },
   "scripts": {
-    "lift" : "npm install && cd ./.cli && npm install && node cli.js",
+    "lift": "npm install && cd ./.cli && npm install && node cli.js",
     "start": "cross-env NODE_ENV=development nf start --wrap",
     "dev": "node webpackDevServer",
     "dist": "cross-env NODE_ENV=production webpack -p --config webpack.config.prod.js",
