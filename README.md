@@ -9,13 +9,12 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/clementdlc)
+
+![Screenshot](https://i.imgur.com/1qDPHN4.png)
+
 ___
 
-<img src="https://i.imgur.com/1qDPHN4.png" align="left" style="border-radius: 5px; margin-bottom: 15px"/>
-
-<br>
-
-## :cloud: Installation
+### :cloud: Installation
 
 ```shell
 soon
@@ -23,7 +22,7 @@ soon
 
 ___
 
-### Run (development)
+### :pencil: Run (development)
 
 There are multiple ways to run the project in development as sails and webpack-dev-server run independently. The easiest way is to use [Foreman](https://github.com/theforeman/foreman) (`npm install -g foreman`) and run:
 
@@ -38,7 +37,7 @@ The alternative is to manually run each process in separate terminal windows.
 To view Beam app, go to `http://localhost:3000` in your browser.
 ___
 
-### Run (Production)
+### :pencil: Run (Production)
 
 Webpack builds the bundle files on `postinstall` and Beam is lifted the same way it's always lifted in production:
 
