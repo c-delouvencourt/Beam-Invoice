@@ -5,3 +5,5 @@ yarn.lock
 assets.json
 package-lock.json
 public/dist
+cli/package-lock.json
+cli/node_modules

@@ -1,0 +1,12 @@
+{
+  "postgresql": {
+    "host": "localhost",
+    "user": "user",
+    "password": "password",
+    "port": "5432",
+    "database": "beam"
+  },
+  "jwt": {
+    "key": "PLEASE CHANGE THIS !"
+  }
+}

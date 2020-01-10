@@ -1,0 +1,32 @@
+{
+  "name": "beam-cli",
+  "version": "1.0.0",
+  "description": "Config beam project",
+  "main": "cli.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PHClement/Beam-Invoice.git"
+  },
+  "keywords": [
+    "Beam"
+  ],
+  "author": "Clément de Louvencourt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PHClement/Beam-Invoice/issues"
+  },
+  "homepage": "https://github.com/PHClement/Beam-Invoice#readme",
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "configstore": "^5.0.0",
+    "edit-json-file": "^1.4.0",
+    "progress": "^2.0.3",
+    "prompt": "^1.0.0",
+    "signale": "^1.4.0",
+    "uuid": "^3.3.3",
+    "yargs": "^15.1.0"
+  }
+}
