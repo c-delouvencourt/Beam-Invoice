@@ -16,7 +16,11 @@ ___
 
 ### :rocket: Features
 
-Soon...
+|Features|...                         |
+|-------------------------------|-----------------------------|
+|`Invoice` |***Planned***|
+|`Estimates` |***Planned***|
+|`Taxes`|***Planned***|
 ___
 
 ### :cloud: Installation
