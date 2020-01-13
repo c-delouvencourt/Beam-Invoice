@@ -1,75 +1,67 @@
 {
-  "translation": {
-    "navbar": {
-      "dashboard": "Dashboard",
-      "clients": "Clients",
-      "devis": "Estimates",
-      "factures": "Invoices",
-      "taxes": "Expenses",
-      "admin": "Administration"
-    },
-    "dashboard": {
-      "hello": "Hello",
-      "cards": {
-        "summary": "Summary",
-        "stats": "Stats",
-        "income": "Sales",
-        "taxes": "Taxes",
-        "profit": "Net Income"
-      }
-    },
-    "clients": {
-      "filter": "Filters",
-      "order": "Order",
-      "search": "Search a client...",
-      "since": "Since...",
-      "hasfacture": "Has at least one invoice ?",
-      "view": "View",
-      "edit": "Edit",
-      "delete": "Delete",
-      "name": "Name",
-      "date": "Date",
-      "actions": "Action",
-      "create": "Create a client"
-    },
-    "form": {
-      "email": "Email",
-      "password": "Password",
-      "validate": "Validate",
-      "login": "Login"
-    },
-    "validation": {
-      "email": "An email address is required !",
-      "password": "A password is required !",
-      "server": {
-      }
-    },
-    "errors": {
-      "error": "Error"
-    },
-    "admin": {
-      "users": "Users",
-      "society": "Company",
-      "settings": "Settings",
-      "updates": "Maintenance"
-    },
-    "api": {
-      "responses": {
-        "E_AUTH_NO_REGISTERED": "You are not registered !",
-        "E_AUTH_INVALID_PASSWORD": "Your password is invalid !",
-        "E_AUTH_NO_USER": "User with given email doesn't exist !",
-        "E_AUTH_CANT_REGISTER": "Can't add the user !",
-        "E_AUTH_ALREADY_REGISTERED": "The user has already been added !",
-        "E_AUTH_SESSION_EXPIRATION": "Your session has expired, please reconnect!",
-        "E_DB_ERROR": "A database error occurred!",
-        "E_CANT_UPLOAD": "Unable to send file, please try again !",
-        "E_NO_PERMISSION": "You do not have permission to do that !",
-        "E_NO_PERMISSION_ADMIN": "You do not have permission to do that !",
-        "E_ROUTES_ERROR": "An error has occurred, please try again !",
-        "E_INVALID_REQUEST": "Invalid request !",
-        "E_MODEL_NO_ENTRY": "No entry in the database !",
-        "E_ALREADY_REQUESTED_IP": "You have already made a request, please try again later !"
-      }
+    "translation": {
+        "navbar": {
+            "dashboard": "Instrumententafel",
+            "clients": "Kunden",
+            "devis": "Schätzungen",
+            "factures": "Rechnungen",
+            "taxes": "Kosten"
+        },
+        "dashboard": {
+            "hello": "Hallo",
+            "cards": {
+                "summary": "Zusammenfassung",
+                "stats": "Statistiken",
+                "income": "Der Umsatz",
+                "taxes": "Steuern",
+                "profit": "Nettoeinkommen",
+                "lastinvoice": ""
+            }
+        },
+        "clients": {
+            "filter": "Filter",
+            "order": "Bestellung",
+            "search": "Suche einen Kunden ...",
+            "since": "Schon seit...",
+            "hasfacture": "Hat mindestens eine Rechnung?",
+            "view": "Aussicht",
+            "edit": "Bearbeiten",
+            "delete": "Löschen",
+            "name": "Name",
+            "date": "Datum",
+            "actions": "Aktion",
+            "create": "Erstellen Sie einen Client"
+        },
+        "form": {
+            "email": "Email",
+            "password": "Passwort",
+            "validate": "Bestätigen",
+            "login": "Einloggen"
+        },
+        "validation": {
+            "email": "Eine E-Mail-Adresse ist erforderlich!",
+            "password": "Ein Passwort ist erforderlich!"
+        },
+        "errors": {
+            "error": "Error"
+        },
+        "api": {
+            "responses": {
+                "E_AUTH_NO_REGISTERED": "Sie sind nicht registriert !",
+                "E_AUTH_INVALID_PASSWORD": "Dein Passwort ist ungültig !",
+                "E_AUTH_NO_USER": "Benutzer mit angegebener E-Mail existiert nicht!",
+                "E_AUTH_CANT_REGISTER": "Der Benutzer kann nicht hinzugefügt werden!",
+                "E_AUTH_ALREADY_REGISTERED": "Der Benutzer wurde bereits hinzugefügt!",
+                "E_AUTH_SESSION_EXPIRATION": "Ihre Sitzung ist abgelaufen, bitte verbinden Sie sich erneut!",
+                "E_DB_ERROR": "Ein Datenbankfehler ist aufgetreten!",
+                "E_CANT_UPLOAD": "Datei kann nicht gesendet werden, bitte versuchen Sie es erneut!",
+                "E_NO_PERMISSION": "Du hast keine Erlaubnis das zu tun !",
+                "E_NO_PERMISSION_ADMIN": "Du hast keine Erlaubnis das zu tun !",
+                "E_ROUTES_ERROR": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut !",
+                "E_INVALID_REQUEST": "Ungültige Anfrage !",
+                "E_MODEL_NO_ENTRY": "Kein Eintrag in der Datenbank!",
+                "E_ALREADY_REQUESTED_IP": "Sie haben bereits eine Anfrage gestellt, bitte versuchen Sie es später noch einmal!"
+            }
+        }
     }
-  }
 }
