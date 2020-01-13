@@ -33,6 +33,20 @@ module.exports.routes = {
 
   // Auth
   'POST /api/auth/login': "AuthController.login",
-  'GET /api/auth/token': "AuthController.token"
+  'GET /api/auth/token': "AuthController.token",
 
+  // Clients
+  'GET /api/clients': "ClientsController.list",
+
+  // Invoices
+  'GET /api/invoices': "InvoicesController.list",
+
+  // Estimates
+  'GET /api/estimates': "EstimatesController.list",
+
+  // Taxes
+  'GET /api/taxes': "TaxesController.list",
+
+  // Contracts
+  'GET /api/contracts': "ContractsController.list"
 };

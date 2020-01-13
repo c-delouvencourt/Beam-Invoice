@@ -18,8 +18,22 @@
 
 
 module.exports.policies = {
-
   AuthController: {
-    token: "isAuth"
+    token: ["isAuth", hasPermission("auth:token")]
+  },
+  InvoicesController: {
+    list: ["isAuth", hasPermission("invoices:list")]
+  },
+  EstimatesController: {
+    list: ["isAuth", hasPermission("invoices:list")]
+  },
+  ClientsController: {
+    list: ["isAuth", hasPermission("clients:list")]
+  },
+  TaxesController: {
+    list: ["isAuth", hasPermission("taxes:list")]
+  },
+  ContractsController: {
+    list: ["isAuth", hasPermission("contracts:list")]
   }
 };
