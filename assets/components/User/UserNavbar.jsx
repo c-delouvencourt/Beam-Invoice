@@ -90,7 +90,7 @@ class UserNavbar extends Component {
               <i className="fas fa-money-check"></i>
             </Link>
             <hr className="separator"/>
-            <Link to={"/clients"}>
+            <Link to={"/admin/society"} className={StatusUtils.isActiveAdminUrl("/admin", this.props.location.pathname, "tooltip is-tooltip-right")} data-tooltip={t('navbar.admin')}>
               <i className="fas fa-cogs"></i>
             </Link>
           </div>

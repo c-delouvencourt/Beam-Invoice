@@ -9,6 +9,18 @@ export default class GradientUtils {
       en: {
         title: 'English',
         img: require('../images/flags/united-kingdom.png')
+      },
+      it: {
+        title: 'Italian',
+        img: require('../images/flags/italy.png')
+      },
+      es: {
+        title: 'Spanish',
+        img: require('../images/flags/spain.png')
+      },
+      de: {
+        title: 'German',
+        img: require('../images/flags/germany.png')
       }
     };
 
@@ -24,6 +36,18 @@ export default class GradientUtils {
       en: {
         title: 'English',
         img: require('../images/flags/united-kingdom.png')
+      },
+      it: {
+        title: 'Italian',
+        img: require('../images/flags/italy.png')
+      },
+      es: {
+        title: 'Spanish',
+        img: require('../images/flags/spain.png')
+      },
+      de: {
+        title: 'German',
+        img: require('../images/flags/germany.png')
       }
     };
 

@@ -5,7 +5,8 @@
       "clients" : "Clients",
       "devis" : "Devis",
       "factures" : "Factures",
-      "taxes" : "Dépenses"
+      "taxes" : "Dépenses",
+      "admin": "Administration"
     },
     "dashboard": {
       "hello": "Bonjour",
@@ -47,6 +48,12 @@
     },
     "errors" : {
       "error" : "Erreur"
+    },
+    "admin": {
+      "users": "Utilisateurs",
+      "society": "Mon Entreprise",
+      "settings": "Paramètres",
+      "updates": "Mise à jour"
     },
     "api" : {
       "responses" : {

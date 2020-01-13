@@ -5,7 +5,8 @@
       "clients": "Clients",
       "devis": "Estimates",
       "factures": "Invoices",
-      "taxes": "Expenses"
+      "taxes": "Expenses",
+      "admin": "Administration"
     },
     "dashboard": {
       "hello": "Hello",
@@ -45,6 +46,12 @@
     },
     "errors": {
       "error": "Error"
+    },
+    "admin": {
+      "users": "Users",
+      "society": "Company",
+      "settings": "Settings",
+      "updates": "Maintenance"
     },
     "api": {
       "responses": {

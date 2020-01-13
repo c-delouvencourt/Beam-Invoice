@@ -3,6 +3,9 @@ import { initReactI18next } from 'react-i18next';
 
 import fr from "./fr.json";
 import en from "./en.json";
+import es from "./es.json";
+import it from "./it.json";
+import de from "./de.json";
 
 const languageDefault = localStorage.getItem("language");
 
@@ -14,7 +17,10 @@ i18n
     fallbackLng: 'fr',
     resources: {
       fr,
-      en
+      en,
+      es,
+      it,
+      de
     },
   });
 

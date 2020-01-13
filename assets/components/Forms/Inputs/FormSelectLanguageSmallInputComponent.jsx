@@ -41,6 +41,27 @@ class FormSelectLanguageSmallInputComponent extends Component {
               }} className="dropdown-item">
                 <img src={LanguageUtils.getImage("en")} style={{height: 11}}/> {LanguageUtils.getTitle("en")}
               </a>
+              <a onClick={() => {
+                i18n.changeLanguage("es");
+                localStorage.setItem("language", "es");
+                this.setState({active: false});
+              }} className="dropdown-item">
+                <img src={LanguageUtils.getImage("es")} style={{height: 11}}/> {LanguageUtils.getTitle("es")}
+              </a>
+              <a onClick={() => {
+                i18n.changeLanguage("it");
+                localStorage.setItem("language", "it");
+                this.setState({active: false});
+              }} className="dropdown-item">
+                <img src={LanguageUtils.getImage("it")} style={{height: 11}}/> {LanguageUtils.getTitle("it")}
+              </a>
+              <a onClick={() => {
+                i18n.changeLanguage("de");
+                localStorage.setItem("language", "de");
+                this.setState({active: false});
+              }} className="dropdown-item">
+                <img src={LanguageUtils.getImage("de")} style={{height: 11}}/> {LanguageUtils.getTitle("de")}
+              </a>
             </div>
           </div>
         )}

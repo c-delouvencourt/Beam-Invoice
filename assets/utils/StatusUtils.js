@@ -4,4 +4,8 @@ export default class StatusUtils {
       return currentUrl == url ? classes + " is-active" : classes;
   }
 
+  static isActiveAdminUrl(url, currentUrl, classes){
+    return currentUrl.includes(url) ? classes + " is-active" : classes;
+  }
+
 }

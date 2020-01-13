@@ -22,7 +22,7 @@ class DashboardScreen extends Component {
 
   @keydown(up)
   onUpPress(){
-    this.props.history.push("/");
+    this.props.history.push("/admin/users");
   }
 
   @keydown(down)
