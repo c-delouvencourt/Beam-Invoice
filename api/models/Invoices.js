@@ -19,6 +19,11 @@ module.exports = {
       required: true
     },
 
+    file: {
+      type: 'string',
+      required: false
+    },
+
     articles: {
       type: 'json',
       required: true

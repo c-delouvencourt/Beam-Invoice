@@ -4,11 +4,24 @@ import {withTranslation} from "react-i18next";
 import PanelComponent from "../components/User/PanelComponent";
 import FormSelectIndependantInputComponent from "../components/Forms/Inputs/FormSelectIndependantInputComponent";
 import ClientsComponent from "../components/User/Clients/ClientsComponent";
+import {withRouter} from "react-router";
+import keydown, {Keys} from "react-keydown";
+const { up, down } = Keys;
 
 class ClientsScreen extends Component {
 
   constructor(props) {
     super(props);
+  }
+
+  @keydown(up)
+  onUpPress(){
+    this.props.history.push("/");
+  }
+
+  @keydown(down)
+  onDownPress(){
+    this.props.history.push("/clients");
   }
 
   render() {
@@ -50,4 +63,4 @@ class ClientsScreen extends Component {
   }
 }
 
-export default withTranslation()(ClientsScreen);
+export default withTranslation()(withRouter(ClientsScreen));

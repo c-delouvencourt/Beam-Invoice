@@ -9,10 +9,25 @@ import {Link} from "react-router-dom";
 import "bulma-extensions/bulma-divider/dist/css/bulma-divider.min.css";
 import FormSelectYearInputComponent from "../components/Forms/Inputs/FormSelectYearInputComponent";
 import {withTranslation} from "react-i18next";
+import {withRouter} from "react-router";
+import keydown, {Keys} from 'react-keydown';
+
+const { up, down } = Keys;
 
 class DashboardScreen extends Component {
+
   constructor(props) {
     super(props);
+  }
+
+  @keydown(up)
+  onUpPress(){
+    this.props.history.push("/");
+  }
+
+  @keydown(down)
+  onDownPress(){
+    this.props.history.push("/clients");
   }
 
   render() {
@@ -60,4 +75,4 @@ class DashboardScreen extends Component {
   }
 }
 
-export default withTranslation()(DashboardScreen);
+export default withTranslation()(withRouter(DashboardScreen));

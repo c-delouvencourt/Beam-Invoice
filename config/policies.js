@@ -15,7 +15,7 @@
  * For more information on configuring policies, check out:
  * http://sailsjs.org/#!/documentation/reference/sails.config/sails.config.policies.html
  */
-
+let hasPermission = require('../api/policies/hasPermission');
 
 module.exports.policies = {
   AuthController: {
