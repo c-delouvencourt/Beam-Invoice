@@ -72,4 +72,5 @@ Beam is a product of  [NocturneLab](https://github.com/PHClement)
 
 **Special thanks to:**
 
+- *Zohir Belhaouzia* for the Italian translation.
 -   *Your name here ?*
