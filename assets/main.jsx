@@ -14,6 +14,7 @@ import ClientsScreen from "./screens/ClientsScreen";
 import LoadingScreen from "./screens/LoadingScreen";
 import AdminUsersScreen from "./screens/Admin/AdminUsersScreen";
 import AdminSocietyScreen from "./screens/Admin/AdminSocietyScreen";
+import AuthProfileScreen from "./screens/AuthProfileScreen";
 
 ReactDom.render(
   <Router>
@@ -22,6 +23,7 @@ ReactDom.render(
 
       <Route path="/loading" exact component={LoadingScreen} />
       <Route path="/login" exact component={AuthLoginScreen} />
+      <Route path="/profile" exact component={AuthProfileScreen} />
 
       <Route path="/clients" exact component={ClientsScreen} />
 

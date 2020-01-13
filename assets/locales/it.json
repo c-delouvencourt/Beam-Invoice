@@ -1,67 +1,68 @@
 {
-    "translation": {
-        "navbar": {
-            "dashboard": "",
-            "clients": "",
-            "devis": "",
-            "factures": "Fatture",
-            "taxes": "Tasse"
-        },
-        "dashboard": {
-            "hello": "Ciao",
-            "cards": {
-                "summary": "",
-                "stats": "",
-                "income": "",
-                "taxes": "Tasse",
-                "profit": "Profitto",
-                "lastinvoice": ""
-            }
-        },
-        "clients": {
-            "filter": "Filtra per ",
-            "order": "Ordine",
-            "search": "Ricerca",
-            "since": "",
-            "hasfacture": "",
-            "view": "",
-            "edit": "Modifica",
-            "delete": "Elimina",
-            "name": "Nome",
-            "date": "Data",
-            "actions": "",
-            "create": "Crea"
-        },
-        "form": {
-            "email": "Email",
-            "password": "Password",
-            "validate": "Validare",
-            "login": "Login"
-        },
-        "validation": {
-            "email": "Email",
-            "password": "Password"
-        },
-        "errors": {
-            "error": "Errore"
-        },
-        "api": {
-            "responses": {
-                "E_AUTH_NO_REGISTERED": "Errore account non registrato ",
-                "E_AUTH_INVALID_PASSWORD": "Errore password incorretta ",
-                "E_AUTH_NO_USER": "",
-                "E_AUTH_CANT_REGISTER": "Errore impossible registrarsi ",
-                "E_AUTH_ALREADY_REGISTERED": "Errore cliente già registrato ",
-                "E_AUTH_SESSION_EXPIRATION": "",
-                "E_DB_ERROR": "Errore database ",
-                "E_CANT_UPLOAD": "Errore uploaded ",
-                "E_NO_PERMISSION": "Errore autorizzazione",
-                "E_NO_PERMISSION_ADMIN": "Errore necessita un account admin",
-                "E_ROUTES_ERROR": "",
-                "E_INVALID_REQUEST": "",
-                "E_MODEL_NO_ENTRY": "",
-                "E_ALREADY_REQUESTED_IP": ""
-            }
-        }
+  "translation": {
+    "navbar": {
+      "dashboard": "",
+      "clients": "",
+      "devis": "",
+      "factures": "Fatture",
+      "taxes": "Tasse",
+      "account": ""
+    },
+    "dashboard": {
+      "hello": "Ciao",
+      "cards": {
+        "summary": "",
+        "stats": "",
+        "income": "",
+        "taxes": "Tasse",
+        "profit": "Profitto",
+        "lastinvoice": ""
+      }
+    },
+    "clients": {
+      "filter": "Filtra per ",
+      "order": "Ordine",
+      "search": "Ricerca",
+      "since": "",
+      "hasfacture": "",
+      "view": "",
+      "edit": "Modifica",
+      "delete": "Elimina",
+      "name": "Nome",
+      "date": "Data",
+      "actions": "",
+      "create": "Crea"
+    },
+    "form": {
+      "email": "Email",
+      "password": "Password",
+      "validate": "Validare",
+      "login": "Login"
+    },
+    "validation": {
+      "email": "Email",
+      "password": "Password"
+    },
+    "errors": {
+      "error": "Errore"
+    },
+    "api": {
+      "responses": {
+        "E_AUTH_NO_REGISTERED": "Errore account non registrato ",
+        "E_AUTH_INVALID_PASSWORD": "Errore password incorretta ",
+        "E_AUTH_NO_USER": "",
+        "E_AUTH_CANT_REGISTER": "Errore impossible registrarsi ",
+        "E_AUTH_ALREADY_REGISTERED": "Errore cliente già registrato ",
+        "E_AUTH_SESSION_EXPIRATION": "",
+        "E_DB_ERROR": "Errore database ",
+        "E_CANT_UPLOAD": "Errore uploaded ",
+        "E_NO_PERMISSION": "Errore autorizzazione",
+        "E_NO_PERMISSION_ADMIN": "Errore necessita un account admin",
+        "E_ROUTES_ERROR": "",
+        "E_INVALID_REQUEST": "",
+        "E_MODEL_NO_ENTRY": "",
+        "E_ALREADY_REQUESTED_IP": ""
+      }
     }
+  }
 }

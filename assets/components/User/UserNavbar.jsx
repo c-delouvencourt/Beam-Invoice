@@ -96,8 +96,8 @@ class UserNavbar extends Component {
           </div>
           <div className="end-sidebar">
             <FormSelectLanguageSmallInputComponent/>
-            <Link to={"/login"} className="sidebar-link">
-              <figure className="image is-32x32">
+            <Link to={"/profile"} className="sidebar-link">
+              <figure className={StatusUtils.isActiveUrlImage("/profile", this.props.location.pathname, "image is-32x32")}>
                 <img className="is-rounded" src="https://bulma.io/images/placeholders/128x128.png"/>
               </figure>
             </Link>

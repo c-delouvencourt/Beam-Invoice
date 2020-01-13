@@ -36,6 +36,14 @@ module.exports = {
       example: 'contact@beam.io'
     },
 
+    rank: {
+      type: 'string',
+      required: true,
+      unique: false,
+      maxLength: 25,
+      example: 'Comptable'
+    },
+
     picture: {
       type: 'string',
       required: false

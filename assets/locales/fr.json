@@ -6,7 +6,8 @@
       "devis" : "Devis",
       "factures" : "Factures",
       "taxes" : "Dépenses",
-      "admin": "Administration"
+      "admin": "Administration",
+      "account": "Mon Compte"
     },
     "dashboard": {
       "hello": "Bonjour",
