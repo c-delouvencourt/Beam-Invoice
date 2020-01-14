@@ -56,5 +56,9 @@ module.exports.routes = {
   'DELETE /api/taxe/:id': "TaxesController.archive",
 
   // Contracts
-  'GET /api/contracts': "ContractsController.list"
+  'GET /api/contract': "ContractsController.list",
+  'GET /api/contract/:id': "ContractsController.get",
+  'PUT /api/contract': "ContractsController.create",
+  'PATCH /api/contract/:id': "ContractsController.update",
+  'DELETE /api/contract/:id': "ContractsController.archive",
 };

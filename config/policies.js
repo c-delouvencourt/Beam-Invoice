@@ -35,9 +35,17 @@ module.exports.policies = {
     archive: ["isAuth", hasPermission("clients:archive")]
   },
   TaxesController: {
-    list: ["isAuth", hasPermission("taxes:list")]
+    list: ["isAuth", hasPermission("taxes:list")],
+    get: ["isAuth", hasPermission("taxes:get")],
+    create: ["isAuth", hasPermission("taxes:create")],
+    update: ["isAuth", hasPermission("taxes:update")],
+    archive: ["isAuth", hasPermission("taxes:archive")]
   },
   ContractsController: {
-    list: ["isAuth", hasPermission("contracts:list")]
+    list: ["isAuth", hasPermission("contracts:list")],
+    get: ["isAuth", hasPermission("contracts:get")],
+    create: ["isAuth", hasPermission("contracts:create")],
+    update: ["isAuth", hasPermission("contracts:update")],
+    archive: ["isAuth", hasPermission("contracts:archive")]
   }
 };
