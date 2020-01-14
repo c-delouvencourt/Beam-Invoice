@@ -2,11 +2,11 @@
   "postgresql": {
     "host": "localhost",
     "user": "user",
-    "password": "password",
-    "port": 5432,
+    "password": "test",
+    "port": "5432",
     "database": "beam"
   },
   "jwt": {
-    "key": "c3e1d3a7-9419-40b3-a921-d4f227b97d0a"
+    "key": "3948b4a9-726b-4bce-b119-0e4f6746b5b0"
   }
 }

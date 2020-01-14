@@ -28,7 +28,11 @@ module.exports.policies = {
     list: ["isAuth", hasPermission("invoices:list")]
   },
   ClientsController: {
-    list: ["isAuth", hasPermission("clients:list")]
+    list: ["isAuth", hasPermission("clients:list")],
+    get: ["isAuth", hasPermission("clients:get")],
+    create: ["isAuth", hasPermission("clients:create")],
+    update: ["isAuth", hasPermission("clients:update")],
+    archive: ["isAuth", hasPermission("clients:archive")]
   },
   TaxesController: {
     list: ["isAuth", hasPermission("taxes:list")]

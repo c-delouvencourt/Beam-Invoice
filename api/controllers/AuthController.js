@@ -1,5 +1,7 @@
 const MainErrors = require('../errors/MainErrors');
 const AuthErrors = require('../errors/AuthErrors');
+const jwt = require('jsonwebtoken');
+const bcrypt = require("bcryptjs");
 
 module.exports = {
   login: function (req, res) {
@@ -9,8 +11,6 @@ module.exports = {
     });
 
     if (params === false) return res.APIResponse(MainErrors.INVALID_REQUEST, false, {validation: params.data});
-
-    let jwt = sails.config.custom;
 
     Users.findOne({
       email: req.param('email')

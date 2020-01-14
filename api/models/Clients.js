@@ -13,7 +13,7 @@ module.exports = {
 
     entrepriseName: {
       type: 'string',
-      required: true,
+      required: false,
       unique: true,
       maxLength: 70
     },
@@ -70,6 +70,18 @@ module.exports = {
     picture: {
       type: 'string',
       required: false
+    },
+
+    siret: {
+      type: 'string',
+      required: false,
+      unique: false
+    },
+
+    tvaNumber: {
+      type: 'string',
+      required: false,
+      unique: false
     },
 
     isDeleted: {

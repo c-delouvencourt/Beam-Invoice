@@ -36,7 +36,11 @@ module.exports.routes = {
   'GET /api/auth/token': "AuthController.token",
 
   // Clients
-  'GET /api/clients': "ClientsController.list",
+  'GET /api/client': "ClientsController.list",
+  'GET /api/client/:id': "ClientsController.get",
+  'PUT /api/client': "ClientsController.create",
+  'PATCH /api/client/:id': "ClientsController.update",
+  'DELETE /api/client/:id': "ClientsController.archive",
 
   // Invoices
   'GET /api/invoices': "InvoicesController.list",
@@ -45,7 +49,11 @@ module.exports.routes = {
   'GET /api/estimates': "EstimatesController.list",
 
   // Taxes
-  'GET /api/taxes': "TaxesController.list",
+  'GET /api/taxe': "TaxesController.list",
+  'GET /api/taxe/:id': "TaxesController.get",
+  'PUT /api/taxe': "TaxesController.create",
+  'PATCH /api/taxe/:id': "TaxesController.update",
+  'DELETE /api/taxe/:id': "TaxesController.archive",
 
   // Contracts
   'GET /api/contracts': "ContractsController.list"
