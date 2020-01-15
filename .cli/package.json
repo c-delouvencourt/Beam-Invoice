@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/PHClement/Beam-Invoice#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "chalk": "^3.0.0",
     "configstore": "^5.0.0",
     "edit-json-file": "^1.4.0",

@@ -1,7 +1,6 @@
 const MainErrors = require('../errors/MainErrors');
 const AuthErrors = require('../errors/AuthErrors');
 const jwt = require('jsonwebtoken');
-const bcrypt = require("bcryptjs");
 
 module.exports = {
   login: function (req, res) {
