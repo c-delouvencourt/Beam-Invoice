@@ -1,8 +1,8 @@
 {
   "db": {
-    "host": "164.132.144.41",
+    "host": "",
     "user": "root",
-    "password": "OqFPmsWtx07q",
+    "password": "",
     "port": "3306",
     "database": "Beam"
   },
