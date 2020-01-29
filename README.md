@@ -21,6 +21,7 @@ ___
 |`Invoice` |***Planned***|
 |`Estimates` |***Planned***|
 |`Taxes`|***Planned***|
+|`Contracts`|***Planned***|
 ___
 
 ### :cloud: Installation
@@ -28,7 +29,7 @@ ___
 #### Requirements:
 ```
 NodeJS
-PostgreSQL server
+MySQL or PostgreSQL server
 ```
 
 **Only one step :**
