@@ -38,9 +38,15 @@ fs.writeFile(__dirname + '/../config.json', JSON.stringify({
       .prompt([
         {type: "input", name: "db:host", message: "DB host", default: "localhost"},
         {type: "input", name: "db:user", message: "DB user", default: "user"},
-        {type: "input", name: "db:password", message: "DB password", default: "password"},
+        {type: "password", name: "db:password", message: "DB password", default: "password"},
         {type: "input", name: "db:port", message: "DB port", default: 3306},
-        {type: "input", name: "db:database", message: "DB database", default: "Beam"}
+        {type: "input", name: "db:database", message: "DB database", default: "Beam"},
+        {type: "confirm", name: "admin:user:create", message: "Next we will create an admin user for you, is this ok ?", default: true},
+        {type: "input", name: "admin:user:firstName", message: "Firstname", default: "John"},
+        {type: "input", name: "admin:user:name", message: "Name", default: "Doe"},
+        {type: "input", name: "admin:user:rank", message: "Rank in the company", default: "CEO"},
+        {type: "input", name: "admin:user:email", message: "Email", default: "contact@beam.io"},
+        {type: "password", name: "admin:user:password", message: "Password", default: "**********"},
       ])
       .then(answers => {
         file.set("db.host", answers["db:host"]);

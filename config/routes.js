@@ -61,4 +61,10 @@ module.exports.routes = {
   'PUT /api/contract': "ContractsController.create",
   'PATCH /api/contract/:id': "ContractsController.update",
   'DELETE /api/contract/:id': "ContractsController.archive",
+
+  // ADMIN
+
+  // Users
+  'GET /api/admin/users': "AdminUsersController.list",
+  'PUT /api/admin/users': "AdminUsersController.create",
 };

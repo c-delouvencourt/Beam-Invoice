@@ -26,6 +26,7 @@
     "configstore": "^5.0.0",
     "edit-json-file": "^1.4.0",
     "figlet": "^1.2.4",
+    "generate-password": "^1.5.0",
     "inquirer": "^7.0.3",
     "progress": "^2.0.3",
     "prompt": "^1.0.0",
