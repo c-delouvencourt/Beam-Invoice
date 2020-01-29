@@ -56,8 +56,7 @@ module.exports = {
     },
 
     permissions: {
-      type: 'number',
-      defaultsTo: false
+      type: 'json'
     },
 
     password: {
@@ -81,7 +80,7 @@ module.exports = {
 
     isDeleted: {
       type: 'boolean',
-      defaultTo: false
+      defaultsTo: false
     }
 
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗

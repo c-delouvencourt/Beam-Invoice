@@ -26,7 +26,7 @@ module.exports = {
 
     viewCount: {
       type: 'number',
-      defaultTo: 0
+      defaultsTo: 0
     },
 
     signatureDate: {
@@ -36,12 +36,12 @@ module.exports = {
 
     isAccepted: {
       type: 'boolean',
-      defaultTo: false
+      defaultsTo: false
     },
 
     isDeleted: {
       type: 'boolean',
-      defaultTo: false
+      defaultsTo: false
     }
 
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗

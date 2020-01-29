@@ -38,7 +38,8 @@ module.exports.http = {
      ***************************************************************************/
 
     order: [
-      "disablePoweredBy"
+      "disablePoweredBy",
+      'bodyParser',
     ],
     //   'startRequestTimer',
     //   'cookieParser',

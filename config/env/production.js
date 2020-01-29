@@ -9,6 +9,7 @@
  * any private information to this file!
  *
  */
+const configJSON = require('../../config.json');
 
 module.exports = {
 
@@ -33,6 +34,14 @@ module.exports = {
 
   log: {
     level: 'silent',
+  },
+
+  datastores: {
+    default: {
+      adapter: require('sails-mysql'),
+      url: 'mysql://' + configJSON.db.user + ':' + configJSON.db.password + '@' + configJSON.db.host + ':' + configJSON.db.port + '/' + configJSON.db.database,
+      connectTimeout: 20000
+    }
   },
 
 };

@@ -41,7 +41,7 @@ module.exports = {
 
     isDeleted: {
       type: 'boolean',
-      defaultTo: false
+      defaultsTo: false
     }
 
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗

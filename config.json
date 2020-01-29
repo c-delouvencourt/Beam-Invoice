@@ -1,10 +1,10 @@
 {
-  "postgresql": {
-    "host": "localhost",
-    "user": "user",
-    "password": "test",
-    "port": "5432",
-    "database": "beam"
+  "db": {
+    "host": "164.132.144.41",
+    "user": "root",
+    "password": "OqFPmsWtx07q",
+    "port": "3306",
+    "database": "Beam"
   },
   "jwt": {
     "key": "3948b4a9-726b-4bce-b119-0e4f6746b5b0"

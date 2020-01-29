@@ -33,18 +33,18 @@ module.exports = {
       type: 'number',
       columnType: 'float',
       required: false,
-      defaultTo: 0
+      defaultsTo: 0
     },
 
     type: {
       type: 'number',
       required: false,
-      defaultTo: 0
+      defaultsTo: 0
     },
 
     viewCount: {
       type: 'number',
-      defaultTo: 0
+      defaultsTo: 0
     },
 
     paymentDate: {
@@ -54,7 +54,7 @@ module.exports = {
 
     fromEstimate: {
       type: 'boolean',
-      defaultTo: false
+      defaultsTo: false
     },
 
     fromEstimateNumber: {
@@ -64,12 +64,12 @@ module.exports = {
 
     isPayed: {
       type: 'boolean',
-      defaultTo: false
+      defaultsTo: false
     },
 
     isDeleted: {
       type: 'boolean',
-      defaultTo: false
+      defaultsTo: false
     }
 
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗

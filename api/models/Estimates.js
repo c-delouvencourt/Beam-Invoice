@@ -28,12 +28,12 @@ module.exports = {
       type: 'number',
       columnType: 'float',
       required: false,
-      defaultTo: 0
+      defaultsTo: 0
     },
 
     viewCount: {
       type: 'number',
-      defaultTo: 0
+      defaultsTo: 0
     },
 
     acceptedDate: {
@@ -43,7 +43,7 @@ module.exports = {
 
     toInvoice: {
       type: 'boolean',
-      defaultTo: false
+      defaultsTo: false
     },
 
     toInvoiceNumber: {
@@ -53,12 +53,12 @@ module.exports = {
 
     isAccepted: {
       type: 'boolean',
-      defaultTo: false
+      defaultsTo: false
     },
 
     isDeleted: {
       type: 'boolean',
-      defaultTo: false
+      defaultsTo: false
     }
 
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
