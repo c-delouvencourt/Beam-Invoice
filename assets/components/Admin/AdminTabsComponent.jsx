@@ -14,7 +14,7 @@ class AdminTabsComponent extends Component {
     const {t} = this.props;
 
     return (
-      <div className="container tabs is-small">
+      <div className="tabs is-small">
         <ul>
           <li className={StatusUtils.isActiveUrl("/admin/society", this.props.location.pathname, "")}><Link to={"/admin/society"}>{t('admin.society')}</Link></li>
           <li className={StatusUtils.isActiveUrl("/admin/users", this.props.location.pathname, "")}><Link to={"/admin/users"}>{t('admin.users')}</Link></li>
