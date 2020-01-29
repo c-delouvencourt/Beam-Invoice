@@ -35,6 +35,8 @@
       "create" : "Créer un client"
     },
     "form" : {
+      "firstName" : "Prénom",
+      "name" : "Nom",
       "email" : "Email",
       "password" : "Mot de passe",
       "validate" : "Valider",
@@ -43,6 +45,9 @@
     "validation" : {
       "email": "Une adresse email valide est requise !",
       "password": "Un mot de passe est requis !",
+      "firstName": "Le prénom est requis !",
+      "name": "Le nom de famille est requis !",
+      "rank": "Le role dans l'entreprise est requis !",
       "server": {
 
       }

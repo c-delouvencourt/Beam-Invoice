@@ -1,67 +1,72 @@
 {
-    "translation": {
-        "navbar": {
-            "dashboard": "Tablero",
-            "clients": "Clientela",
-            "devis": "Estimados",
-            "factures": "Facturas",
-            "taxes": "Gastos"
-        },
-        "dashboard": {
-            "hello": "Hola",
-            "cards": {
-                "summary": "Resumen",
-                "stats": "Estadísticas",
-                "income": "Ventas",
-                "taxes": "Impuestos",
-                "profit": "Lngresos netos",
-                "lastinvoice": ""
-            }
-        },
-        "clients": {
-            "filter": "Filtros",
-            "order": "Orden",
-            "search": "Buscar un cliente ...",
-            "since": "Ya que...",
-            "hasfacture": "Tiene al menos una factura?",
-            "view": "Ver",
-            "edit": "Editar",
-            "delete": "Eliminar",
-            "name": "Nombre",
-            "date": "Fecha",
-            "actions": "Acción",
-            "create": "Crear un cliente"
-        },
-        "form": {
-            "email": "Email",
-            "password": "Contraseña",
-            "validate": "Validar",
-            "login": "Iniciar sesión"
-        },
-        "validation": {
-            "email": "Se requiere una dirección de correo electrónico !",
-            "password": "Se requiere una contraseña!"
-        },
-        "errors": {
-            "error": "Error"
-        },
-        "api": {
-            "responses": {
-                "E_AUTH_NO_REGISTERED": "Usted no está registrado !",
-                "E_AUTH_INVALID_PASSWORD": "Su contraseña es inválida !",
-                "E_AUTH_NO_USER": "¡El usuario con un correo electrónico dado no existe!",
-                "E_AUTH_CANT_REGISTER": "No se puede agregar el usuario!",
-                "E_AUTH_ALREADY_REGISTERED": "¡El usuario ya ha sido agregado!",
-                "E_AUTH_SESSION_EXPIRATION": "Su sesión ha expirado, ¡vuelva a conectar!",
-                "E_DB_ERROR": "¡Ocurrió Un Error en la Base de Datos!",
-                "E_CANT_UPLOAD": "No se puede enviar el archivo, ¡inténtalo de nuevo!",
-                "E_NO_PERMISSION": "No tienes permiso para hacer eso !",
-                "E_NO_PERMISSION_ADMIN": "No tienes permiso para hacer eso !",
-                "E_ROUTES_ERROR": "Ha ocurrido un error. Por favor intente otra vez !",
-                "E_INVALID_REQUEST": "Solicitud no válida !",
-                "E_MODEL_NO_ENTRY": "¡Ninguna entrada en la base de datos!",
-                "E_ALREADY_REQUESTED_IP": "Ya ha realizado una solicitud, ¡intente más tarde!"
-            }
-        }
+  "translation": {
+    "navbar": {
+      "dashboard": "Tablero",
+      "clients": "Clientela",
+      "devis": "Estimados",
+      "factures": "Facturas",
+      "taxes": "Gastos"
+    },
+    "dashboard": {
+      "hello": "Hola",
+      "cards": {
+        "summary": "Resumen",
+        "stats": "Estadísticas",
+        "income": "Ventas",
+        "taxes": "Impuestos",
+        "profit": "Lngresos netos",
+        "lastinvoice": ""
+      }
+    },
+    "clients": {
+      "filter": "Filtros",
+      "order": "Orden",
+      "search": "Buscar un cliente ...",
+      "since": "Ya que...",
+      "hasfacture": "Tiene al menos una factura?",
+      "view": "Ver",
+      "edit": "Editar",
+      "delete": "Eliminar",
+      "name": "Nombre",
+      "date": "Fecha",
+      "actions": "Acción",
+      "create": "Crear un cliente"
+    },
+    "form": {
+      "firstName" : "Prénom",
+      "name" : "Nom",
+      "email": "Email",
+      "password": "Contraseña",
+      "validate": "Validar",
+      "login": "Iniciar sesión"
+    },
+    "validation": {
+      "email": "Se requiere una dirección de correo electrónico !",
+      "password": "Se requiere una contraseña!",
+      "firstName": "Le prénom est requis !",
+      "name": "Le nom de famille est requis !",
+      "rank": "Le role dans l'entreprise est requis !"
+    },
+    "errors": {
+      "error": "Error"
+    },
+    "api": {
+      "responses": {
+        "E_AUTH_NO_REGISTERED": "Usted no está registrado !",
+        "E_AUTH_INVALID_PASSWORD": "Su contraseña es inválida !",
+        "E_AUTH_NO_USER": "¡El usuario con un correo electrónico dado no existe!",
+        "E_AUTH_CANT_REGISTER": "No se puede agregar el usuario!",
+        "E_AUTH_ALREADY_REGISTERED": "¡El usuario ya ha sido agregado!",
+        "E_AUTH_SESSION_EXPIRATION": "Su sesión ha expirado, ¡vuelva a conectar!",
+        "E_DB_ERROR": "¡Ocurrió Un Error en la Base de Datos!",
+        "E_CANT_UPLOAD": "No se puede enviar el archivo, ¡inténtalo de nuevo!",
+        "E_NO_PERMISSION": "No tienes permiso para hacer eso !",
+        "E_NO_PERMISSION_ADMIN": "No tienes permiso para hacer eso !",
+        "E_ROUTES_ERROR": "Ha ocurrido un error. Por favor intente otra vez !",
+        "E_INVALID_REQUEST": "Solicitud no válida !",
+        "E_MODEL_NO_ENTRY": "¡Ninguna entrada en la base de datos!",
+        "E_ALREADY_REQUESTED_IP": "Ya ha realizado una solicitud, ¡intente más tarde!"
+      }
     }
+  }
 }

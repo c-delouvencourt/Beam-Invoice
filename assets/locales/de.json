@@ -34,6 +34,8 @@
       "create": "Erstellen Sie einen Client"
     },
     "form": {
+      "firstName" : "Prénom",
+      "name" : "Nom",
       "email": "Email",
       "password": "Passwort",
       "validate": "Bestätigen",
@@ -41,7 +43,10 @@
     },
     "validation": {
       "email": "Eine E-Mail-Adresse ist erforderlich!",
-      "password": "Ein Passwort ist erforderlich!"
+      "password": "Ein Passwort ist erforderlich!",
+      "firstName": "Le prénom est requis !",
+      "name": "Le nom de famille est requis !",
+      "rank": "Le role dans l'entreprise est requis !"
     },
     "errors": {
       "error": "Error"

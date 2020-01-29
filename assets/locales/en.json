@@ -34,6 +34,8 @@
       "create": "Create a client"
     },
     "form": {
+      "firstName" : "First Name",
+      "name" : "Last Name",
       "email": "Email",
       "password": "Password",
       "validate": "Validate",
@@ -42,6 +44,9 @@
     "validation": {
       "email": "An email address is required !",
       "password": "A password is required !",
+      "firstName": "The first name is required !",
+      "name": "The last name is required !",
+      "rank": "The business role of the user is required !",
       "server": {
       }
     },

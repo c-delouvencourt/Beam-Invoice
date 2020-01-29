@@ -7,6 +7,7 @@ import {withRouter} from "react-router";
 import keydown, {Keys} from 'react-keydown';
 import PanelComponent from "../../components/User/PanelComponent";
 import AdminPanelComponent from "../../components/Admin/AdminPanelComponent";
+import AdminFormUsersComponent from "../../components/Forms/Admin/AdminFormUsersComponent";
 
 const { up, down } = Keys;
 
@@ -32,7 +33,15 @@ class AdminUsersScreen extends Component {
     return (
       <AdminPanelComponent title={t('admin.users')}>
         <div className="columns is-multiline m-t-30">
-          <h1>test</h1>
+          <div className="column is-7 is-12-mobile">
+          </div>
+          <div className="column is-5 is-12-mobile">
+            <div className="card">
+              <div className="card-content">
+                <AdminFormUsersComponent/>
+              </div>
+            </div>
+          </div>
         </div>
       </AdminPanelComponent>
     );
