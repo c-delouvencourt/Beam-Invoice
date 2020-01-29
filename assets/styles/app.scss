@@ -34,6 +34,12 @@ html, body {
   }
 }
 
+.message.is-danger .message-body {
+  border-color: #f14668;
+  color: #cc0f35;
+  font-size: 12px;
+}
+
 // Spinner
 
 .sk-folding-cube {

@@ -4,8 +4,8 @@ export default class APIAuth {
 
   static login(email, password) {
     return BeamAPI.url('/auth/login').parameters({
-      email,
-      password
+      email: email,
+      password: password
     }).contentJson().post();
   }
 
