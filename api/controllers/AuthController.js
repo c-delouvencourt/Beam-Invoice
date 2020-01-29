@@ -16,7 +16,7 @@ module.exports = {
       Users.findOne({
         email: req.param('email')
       }).exec(function callback(err, user) {
-        if (err) return res.APIResponse(MainErrors.DB_ERROR, false, {});
+        if (err) return res.APIResponse(MainErrors.DB_ERROR, false, {}) ;
         if (!user) return res.APIResponse(AuthErrors.NO_REGISTERED, false, {});
 
         bcrypt.compare(req.param('password'), user.password, function (error, matched) {

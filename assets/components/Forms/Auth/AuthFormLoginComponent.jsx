@@ -8,6 +8,9 @@ import Loading from "../../Loading";
 import FormPasswordInputComponent from "../Inputs/FormPasswordInputComponent";
 import APIAuth from "../../../api/services/APIAuth";
 import HandleBeamAPI from "../../../api/HandleBeamAPI";
+import {loginUser} from "../../../redux/actions/auth/AuthActions";
+import connect from "react-redux/es/connect/connect";
+import {withRouter} from "react-router";
 
 const ValidationSchema = Yup.object().shape({
   email: Yup.string()
@@ -44,7 +47,9 @@ class AuthFormLoginComponent extends Component {
               actions.setSubmitting(false);
               actions.setStatus({ msg: t(r.data.message) });
             })).then(data => {
-              localStorage.setItem("user-jwt", data.jwt)
+              localStorage.setItem("user-jwt", data.jwt);
+              this.props.loginUser(data.jwt);
+              this.props.history.push('/')
             }).catch(e => HandleBeamAPI.error(e));
           }}
           validationSchema={ValidationSchema}
@@ -105,4 +110,18 @@ class AuthFormLoginComponent extends Component {
   }
 }
 
-export default withTranslation()(AuthFormLoginComponent);
+
+const mapDispatchToProps = dispatch => {
+  return {
+    loginUser: (data) => {
+      dispatch(loginUser(data));
+    }
+  }
+};
+
+const mapStateToProps = state => ({
+  isAuthenticated: state.auth.isAuthenticated,
+  user: state.auth.user
+});
+
+export default withTranslation()(connect(mapStateToProps, mapDispatchToProps)(withRouter(AuthFormLoginComponent)));
