@@ -38,6 +38,7 @@ class AdminUsersScreen extends Component {
           <div className="column is-5 is-12-mobile">
             <div className="card">
               <div className="card-content">
+                <h5 className="title is-5">{t('admin.usersContent.add_user')}</h5>
                 <AdminFormUsersComponent/>
               </div>
             </div>

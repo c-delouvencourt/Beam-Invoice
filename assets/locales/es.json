@@ -35,10 +35,12 @@
     "form": {
       "firstName" : "Prénom",
       "name" : "Nom",
+      "rank" : "Role dans l'entreprise",
       "email": "Email",
       "password": "Contraseña",
       "validate": "Validar",
-      "login": "Iniciar sesión"
+      "login": "Iniciar sesión",
+      "add" : "Ajouter"
     },
     "validation": {
       "email": "Se requiere una dirección de correo electrónico !",
@@ -49,6 +51,15 @@
     },
     "errors": {
       "error": "Error"
+    },
+    "admin": {
+      "users": "Utilisateurs",
+      "society": "Mon Entreprise",
+      "settings": "Paramètres",
+      "updates": "Mise à jour",
+      "usersContent": {
+        "add_user": "Ajouter un utilisateur"
+      }
     },
     "api": {
       "responses": {

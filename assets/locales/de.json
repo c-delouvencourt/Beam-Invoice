@@ -36,10 +36,12 @@
     "form": {
       "firstName" : "Prénom",
       "name" : "Nom",
+      "rank" : "Role dans l'entreprise",
       "email": "Email",
       "password": "Passwort",
       "validate": "Bestätigen",
-      "login": "Einloggen"
+      "login": "Einloggen",
+      "add" : "Ajouter"
     },
     "validation": {
       "email": "Eine E-Mail-Adresse ist erforderlich!",
@@ -50,6 +52,15 @@
     },
     "errors": {
       "error": "Error"
+    },
+    "admin": {
+      "users": "Users",
+      "society": "Company",
+      "settings": "Settings",
+      "updates": "Maintenance",
+      "usersContent": {
+        "add_user": "Add user"
+      }
     },
     "api": {
       "responses": {

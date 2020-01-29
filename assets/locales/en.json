@@ -36,10 +36,12 @@
     "form": {
       "firstName" : "First Name",
       "name" : "Last Name",
+      "rank" : "Role in the company",
       "email": "Email",
       "password": "Password",
       "validate": "Validate",
-      "login": "Login"
+      "login": "Login",
+      "add" : "Add"
     },
     "validation": {
       "email": "An email address is required !",
@@ -57,7 +59,10 @@
       "users": "Users",
       "society": "Company",
       "settings": "Settings",
-      "updates": "Maintenance"
+      "updates": "Maintenance",
+      "usersContent": {
+        "add_user": "Add user"
+      }
     },
     "api": {
       "responses": {

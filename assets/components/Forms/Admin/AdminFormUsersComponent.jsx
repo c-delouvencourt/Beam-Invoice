@@ -90,18 +90,21 @@ class AdminFormUsersComponent extends Component {
                     </div>
                   </article>}
 
-                  <FormTextInputComponent label={t('form.name')} element={"email"} placeholder={"Jean"}
+                  <FormTextInputComponent label={t('form.firstName')} element={"firstName"} placeholder={"John"}
+                                          icon={"fas fa-tag"} errors={errors} values={values} touched={touched}
+                                          handleBlur={handleBlur} handleChange={handleChange}/>
+                  <FormTextInputComponent label={t('form.name')} element={"name"} placeholder={"Doe"}
                                            icon={"fas fa-tag"} errors={errors} values={values} touched={touched}
                                            handleBlur={handleBlur} handleChange={handleChange}/>
                   <FormEmailInputComponent label={t('form.email')} element={"email"} placeholder={"client@beam.io"}
                                            icon={"fas fa-envelope"} errors={errors} values={values} touched={touched}
                                            handleBlur={handleBlur} handleChange={handleChange}/>
-                  <FormPasswordInputComponent label={t('form.password')} element={"password"} placeholder={"***********"}
-                                           icon={"fas fa-shield-alt"} errors={errors} values={values} touched={touched}
-                                           handleBlur={handleBlur} handleChange={handleChange}/>
+                  <FormTextInputComponent label={t('form.rank')} element={"rank"} placeholder={"Developper, CTO, CEO"}
+                                          icon={"fas fa-user-tag"} errors={errors} values={values} touched={touched}
+                                          handleBlur={handleBlur} handleChange={handleChange}/>
 
                   <button type="submit" className="button is-primary custom-button m-t-30 is-fullwidth" disabled={isSubmitting}>
-                    {t('form.login')}
+                    {t('form.add')}
                   </button>
                 </div>
               )}

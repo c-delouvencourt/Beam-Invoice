@@ -38,9 +38,11 @@
       "firstName" : "Prénom",
       "name" : "Nom",
       "email" : "Email",
+      "rank" : "Role dans l'entreprise",
       "password" : "Mot de passe",
       "validate" : "Valider",
-      "login" : "Connexion"
+      "login" : "Connexion",
+      "add" : "Ajouter"
     },
     "validation" : {
       "email": "Une adresse email valide est requise !",
@@ -59,7 +61,10 @@
       "users": "Utilisateurs",
       "society": "Mon Entreprise",
       "settings": "Paramètres",
-      "updates": "Mise à jour"
+      "updates": "Mise à jour",
+      "usersContent": {
+        "add_user": "Ajouter un utilisateur"
+      }
     },
     "api" : {
       "responses" : {
