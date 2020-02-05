@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, Fragment} from 'react';
 import SidebarComponent from "../components/User/SidebarComponent";
 import PanelComponent from "../components/User/PanelComponent";
 import {withRouter} from "react-router";
@@ -7,8 +7,14 @@ import "bulma-extensions/bulma-divider/dist/css/bulma-divider.min.css";
 import "bulma-extensions/bulma-tooltip/dist/css/bulma-tooltip.min.css";
 import {loginUser, logoutUser} from "../redux/actions/auth/AuthActions";
 import {connect} from "react-redux";
+import AuthFormProfileComponent from "../components/Forms/Auth/AuthFormProfileComponent";
+import ModalComponent from "../components/Modals/ModalComponent";
 
 class AuthProfileScreen extends Component {
+
+  state = {
+    changePasswordModal: false
+  };
 
   constructor(props) {
     super(props);
@@ -42,7 +48,7 @@ class AuthProfileScreen extends Component {
             </div>
             <h5 className="title is-5 is-uppercase m-t-30" style={{color: "rgb(154, 154, 154)", fontSize: 12}}>ACTIONS</h5>
             <a className="button user-button-panel is-fullwidth m-t-15">Activer la 2FA</a>
-            <a className="button user-button-panel is-fullwidth m-t-15">Modifier le mot de passe</a>
+            <a className="button user-button-panel is-fullwidth m-t-15" onClick={() => this.setState({changePasswordModal: true})}>Modifier le mot de passe</a>
             <div className="is-divider" style={{borderTop: "1px solid #eff1f5", margin: '1rem 0'}}></div>
             <a className="button user-button-panel is-red is-fullwidth m-t-15" onClick={() => {
               this.props.logoutUser();
@@ -54,11 +60,19 @@ class AuthProfileScreen extends Component {
           <div className="column is-9 is-12-mobile">
             <div className="card is-fullwidth" style={{minHeight: 600}}>
               <div className="card-content">
-
+                <hr/>
+                <AuthFormProfileComponent/>
               </div>
             </div>
           </div>
         </div>
+        <ModalComponent title={t('profile.change-password')} isActive={this.state.changePasswordModal} onClose={() => {
+          this.setState({changePasswordModal: !this.state.changePasswordModal});
+        }} buttons={(
+          <button className="button is-primary custom-button" style={{width: 125}}>{t('form.edit')}</button>
+        )}>
+
+        </ModalComponent>
       </PanelComponent>
     );
   }

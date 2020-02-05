@@ -63,7 +63,9 @@ module.exports = {
         country: req.param('country')
       }).fetch();
 
-      return res.APIResponse(MainErrors.OK, false, {client});
+      let clients = await Clients.find({isDeleted: false});
+
+      return res.APIResponse(MainErrors.OK, false, {clients});
     }catch (e) {
       return res.APIResponse(MainErrors.ROUTES_ERROR, false, {error: e});
     }

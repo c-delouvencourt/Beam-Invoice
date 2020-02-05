@@ -292,6 +292,45 @@ html, body {
   }
 }
 
+// Modals
+
+.modal-card-head {
+  border-bottom: 1px solid #ffffff;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.modal-card-foot, .modal-card-head {
+  align-items: center;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: flex-start;
+  padding: 20px;
+  position: relative;
+}
+
+.modal-card-foot {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border-top: 1px solid #ffffff;
+}
+
+.modal-card-title {
+  font-weight: bold;
+  color: #c5c5c5;
+  flex-grow: 1;
+  flex-shrink: 0;
+  text-transform: uppercase;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.help.is-danger {
+  color: #f14668;
+  font-size: 0.5rem;
+}
+
 // HR
 
 hr.separator {

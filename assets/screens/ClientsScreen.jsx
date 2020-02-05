@@ -6,9 +6,21 @@ import FormSelectIndependantInputComponent from "../components/Forms/Inputs/Form
 import ClientsComponent from "../components/User/Clients/ClientsComponent";
 import {withRouter} from "react-router";
 import keydown, {Keys} from "react-keydown";
+import ModalComponent from "../components/Modals/ModalComponent";
+import ClientsFormAddComponent from "../components/Forms/Clients/ClientsFormAddComponent";
+import {loginUser} from "../redux/actions/auth/AuthActions";
+import {connect} from "react-redux";
+import {updateClients} from "../redux/actions/clients/ClientsActions";
+import APIClients from "../api/services/APIClients";
+import HandleBeamAPI from "../api/HandleBeamAPI";
+
 const { up, down } = Keys;
 
 class ClientsScreen extends Component {
+
+  state = {
+    addClientModal: false
+  };
 
   constructor(props) {
     super(props);
@@ -22,6 +34,14 @@ class ClientsScreen extends Component {
   @keydown(down)
   onDownPress(){
     this.props.history.push("/clients");
+  }
+
+  componentDidMount() {
+    APIClients.list(false).then(r => HandleBeamAPI.handleWithError(r, (r) => {
+      this.setState({loading: false});
+    })).then(data => {
+      this.props.updateClients(data.clients);
+    }).catch(e => HandleBeamAPI.error(e));
   }
 
   render() {
@@ -39,7 +59,9 @@ class ClientsScreen extends Component {
                   </span>
               </div>
             </div>
-            <a className="button user-button is-primary is-fullwidth m-b-10">{t('clients.create')}</a>
+            <a className="button user-button is-primary is-fullwidth m-b-10" onClick={() => {
+              this.setState({ addClientModal: true });
+            }}>{t('clients.create')}</a>
             <label className="label m-t-50">{t('clients.filter')}</label>
             <FormSelectIndependantInputComponent selected={t('clients.since')} data={[{title: "1 an", value: "1y"}]}
                                                  containerClassName={"m-t-5"}/>
@@ -52,15 +74,34 @@ class ClientsScreen extends Component {
           </SidebarComponent>
           <div className="column is-9 is-12-mobile">
             <div className="columns is-multiline">
-              <ClientsComponent delay={150}/>
-              <ClientsComponent delay={300}/>
-              <ClientsComponent delay={450}/>
+              {this.props.clients.map((c, k) => (
+                <ClientsComponent delay={150 * k}/>
+              ))}
             </div>
           </div>
         </div>
+        <ModalComponent title={t('clients.create')} isActive={this.state.addClientModal} onClose={() => {
+          this.setState({addClientModal: !this.state.addClientModal});
+        }} buttons={(
+          <button className="button is-primary custom-button" style={{width: 125}}>{t('form.add')}</button>
+        )}>
+          <ClientsFormAddComponent/>
+        </ModalComponent>
       </PanelComponent>
     );
   }
 }
 
-export default withTranslation()(withRouter(ClientsScreen));
+const mapDispatchToProps = dispatch => {
+  return {
+    updateClients: (data) => {
+      dispatch(updateClients(data));
+    }
+  }
+};
+
+const mapStateToProps = state => ({
+  clients: state.clients.clients
+});
+
+export default withTranslation()(connect(mapStateToProps, mapDispatchToProps)(withRouter(ClientsScreen)));

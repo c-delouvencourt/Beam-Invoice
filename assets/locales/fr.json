@@ -38,11 +38,26 @@
       "firstName" : "Prénom",
       "name" : "Nom",
       "email" : "Email",
+      "phone" : "Téléphone",
+      "address" : "Adresse",
+      "address2" : "Complément d'adresse",
+      "city" : "Ville",
+      "postalCode" : "Code postal",
+      "country" : "Pays",
+      "siret" : "Numéro de SIRET",
+      "tvaNumber" : "Numéro de TVA",
       "rank" : "Role dans l'entreprise",
       "password" : "Mot de passe",
+      "entrepriseName" : "Raison sociale de l'entreprise",
+      "fullNameDirector" : "Nom complet du dirigeant",
       "validate" : "Valider",
       "login" : "Connexion",
-      "add" : "Ajouter"
+      "add" : "Ajouter",
+      "edit" : "Modifier",
+      "cancel" : "Annuler"
+    },
+    "profile": {
+      "change-password": "Changement du mot de passe"
     },
     "validation" : {
       "email": "Une adresse email valide est requise !",
@@ -50,6 +65,16 @@
       "firstName": "Le prénom est requis !",
       "name": "Le nom de famille est requis !",
       "rank": "Le role dans l'entreprise est requis !",
+      "phone" : "Le numéro de téléphone est obligatoire !",
+      "address" : "L'adresse est obligatoire !",
+      "address2" : "Le complément d'adresse est obligatoire !",
+      "city" : "La ville est obligatoire !",
+      "postalCode" : "Le code postal est obligatoire !",
+      "country" : "Le pays est obligatoire !",
+      "siret" : "Le numéro de SIRET est obligatoire !",
+      "tvaNumber" : "Le numéro de TVA est obligatoire",
+      "entrepriseName" : "La raison sociale de l'entreprise est obligatoire !",
+      "fullNameDirector" : "Le nom complet du dirigeant est obligatoire !",
       "server": {
 
       }

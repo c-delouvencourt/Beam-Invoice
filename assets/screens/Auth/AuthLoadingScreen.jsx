@@ -18,6 +18,7 @@ class AuthLoadingScreen extends Component {
   }
 
   componentDidMount() {
+    console.log(this.props);
     APIAuth.token().then(r => HandleBeamAPI.handleWithError(r, (r) => {
       localStorage.removeItem("user-jwt");
       this.props.logoutUser();
@@ -34,7 +35,7 @@ class AuthLoadingScreen extends Component {
         this.setState({exit: true});
       }, 1000);
       setTimeout(() => {
-        this.props.history.push('/')
+        this.props.history.push(this.props.location.state.from ? this.props.location.state.from.pathname === "/loading" ? "/" : this.props.location.state.from.pathname : "/")
       }, 2000);
     }).catch(e => HandleBeamAPI.error(e));
   }
