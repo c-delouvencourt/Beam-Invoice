@@ -5,6 +5,8 @@ import {withRouter} from "react-router";
 import {withTranslation} from "react-i18next";
 import "bulma-extensions/bulma-divider/dist/css/bulma-divider.min.css";
 import "bulma-extensions/bulma-tooltip/dist/css/bulma-tooltip.min.css";
+import {loginUser, logoutUser} from "../redux/actions/auth/AuthActions";
+import {connect} from "react-redux";
 
 class AuthProfileScreen extends Component {
 
@@ -26,8 +28,8 @@ class AuthProfileScreen extends Component {
                 </p>
               </figure>
               <div className="media-content">
-                <h5 className="title is-5 m-t-5" style={{fontSize: 14}}>Clément de Louvencourt</h5>
-                <h5 className="subtitle is-5 has-text-weight-light" style={{fontSize: 12}}>Comptable</h5>
+                <h5 className="title is-5 m-t-5" style={{fontSize: 14}}>{this.props.user.firstName + " " + this.props.user.name}</h5>
+                <h5 className="subtitle is-5 has-text-weight-light" style={{fontSize: 12}}>{this.props.user.rank}</h5>
               </div>
             </article>
             <h5 className="title is-5 is-uppercase m-t-15" style={{color: "rgb(154, 154, 154)", fontSize: 12, marginBottom: 15}}>PERMISSIONS</h5>
@@ -42,7 +44,11 @@ class AuthProfileScreen extends Component {
             <a className="button user-button-panel is-fullwidth m-t-15">Activer la 2FA</a>
             <a className="button user-button-panel is-fullwidth m-t-15">Modifier le mot de passe</a>
             <div className="is-divider" style={{borderTop: "1px solid #eff1f5", margin: '1rem 0'}}></div>
-            <a className="button user-button-panel is-red is-fullwidth m-t-15">Déconnexion</a>
+            <a className="button user-button-panel is-red is-fullwidth m-t-15" onClick={() => {
+              this.props.logoutUser();
+              localStorage.removeItem("user-jwt");
+              this.props.history.push("/login");
+            }}>Déconnexion</a>
             <a className="button user-button-panel is-dangerdanger is-fullwidth m-t-15">Supprimer mon compte</a>
           </SidebarComponent>
           <div className="column is-9 is-12-mobile">
@@ -58,4 +64,20 @@ class AuthProfileScreen extends Component {
   }
 }
 
-export default withTranslation()(withRouter(AuthProfileScreen));
+const mapDispatchToProps = dispatch => {
+  return {
+    loginUser: (data) => {
+      dispatch(loginUser(data));
+    },
+    logoutUser: (data) => {
+      dispatch(logoutUser(data))
+    }
+  }
+};
+
+const mapStateToProps = state => ({
+  isAuthenticated: state.auth.isAuthenticated,
+  user: state.auth.user
+});
+
+export default withTranslation()(connect(mapStateToProps, mapDispatchToProps)(withRouter(AuthProfileScreen)));
