@@ -19,7 +19,7 @@ let hasPermission = require('../api/policies/hasPermission');
 
 module.exports.policies = {
   AuthController: {
-    token: ["isAuth", hasPermission("auth:token")]
+    token: ["isAuth"]
   },
   InvoicesController: {
     list: ["isAuth", hasPermission("invoices:list")]

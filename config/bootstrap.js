@@ -23,23 +23,20 @@ module.exports.bootstrap = async function (cb) {
       numbers: true,
     });
 
-    bcrypt.hash(password, 8, async function (error, hash) {
-      await Users.create(
-        {firstName: "John", name: "Doe", email: "admin@beam.io", rank: 'Admin', password: hash, permissions: [], apiToken: apiToken, jwtToken: apiToken}
-      );
-      sails.log();
-      sails.log('------------------------------------------------------------');
-      sails.log('We have created an user for you because of first start up !');
-      sails.log('');
-      sails.log('             PLEASE CHANGE THE PASSWORD !!!                  ');
-      sails.log('');
-      sails.log('                 Your credentials                           ');
-      sails.log('               ---------------------');
-      sails.log('               Email : admin@beam.io                       ');
-      sails.log('               Password : ', password);
-      sails.log('------------------------------------------------------------');
-    });
-
+    await Users.create(
+      {firstName: "John", name: "Doe", email: "admin@beam.io", rank: 'Admin', password: password, permissions: [], apiToken: apiToken, jwtToken: apiToken}
+    );
+    sails.log();
+    sails.log('------------------------------------------------------------');
+    sails.log('We have created an user for you because of first start up !');
+    sails.log('');
+    sails.log('             PLEASE CHANGE THE PASSWORD !!!                  ');
+    sails.log('');
+    sails.log('                 Your credentials                           ');
+    sails.log('               ---------------------');
+    sails.log('               Email : admin@beam.io                       ');
+    sails.log('               Password :', password);
+    sails.log('------------------------------------------------------------');
   }
   // It's very important to trigger this callback method when you are finished
   // with the bootstrap!  (otherwise your server will never lift, since it's waiting on the bootstrap)

@@ -47,8 +47,8 @@ class AuthFormLoginComponent extends Component {
               actions.setSubmitting(false);
               actions.setStatus({ msg: t(r.data.message) });
             })).then(data => {
-              localStorage.setItem("user-jwt", data.jwt);
-              this.props.loginUser(data.jwt);
+              localStorage.setItem("user-jwt", data.user.jwt);
+              this.props.loginUser(data.user);
               this.props.history.push('/')
             }).catch(e => HandleBeamAPI.error(e));
           }}

@@ -60,12 +60,12 @@ module.exports = {
     },
 
     password: {
-      type: 'string',
+      type: 'text',
       description: 'Mot de passe de l\'utilisateur.',
     },
 
     apiToken: {
-      type: 'string',
+      type: 'text',
       description: 'API Token de l\'utilisateur.',
       required: true,
       unique: true,
@@ -73,7 +73,7 @@ module.exports = {
     },
 
     jwt: {
-      type: 'string',
+      type: 'text',
       description: 'Token JWT de l\'utilisateur.',
       example: 'n8Z4QBr8He5IujCSNAU1t6Da3ihUpRjEwyt1ScLxnRO39GJdr5G9lve'
     },

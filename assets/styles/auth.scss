@@ -1,5 +1,13 @@
 .login-background {
-  background: url("../images/background.png");
+  background: #756ee0 url("../images/background.png");
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.login-background-2{
+  background: #fff url("../images/background1.png");
   background-size: cover;
   width: 100vw;
   height: 100vh;

@@ -9,7 +9,6 @@ import NotFound from 'components/NotFound/NotFound';
 import DashboardScreen from "./screens/DashboardScreen";
 import AuthLoginScreen from "./screens/Auth/AuthLoginScreen";
 import ClientsScreen from "./screens/ClientsScreen";
-import LoadingScreen from "./screens/LoadingScreen";
 import AdminUsersScreen from "./screens/Admin/AdminUsersScreen";
 import AdminSocietyScreen from "./screens/Admin/AdminSocietyScreen";
 import AuthProfileScreen from "./screens/AuthProfileScreen";
@@ -17,12 +16,14 @@ import {Redirect} from "react-router";
 
 import Store from "./Store";
 import {Provider} from "react-redux";
+import AuthLoadingScreen from "./screens/Auth/AuthLoadingScreen";
+
 
 export const PrivateRoute = ({ component: Component, ...rest }) => {
   return (
     <Route {...rest} render={props => (
       localStorage.getItem('user-jwt')
-        ? Store.getState().auth.isAuthenticated ? <Component {...props} /> : <Redirect to={{ pathname: ' /loading', state: { from: props.location } }} />
+        ? Store.getState().auth.isAuthenticated ? <Component {...props} /> : <Redirect to={{ pathname: 'loading', state: { from: props.location } }} />
         : <Redirect to={{ pathname: '/login', state: { from: props.location } }} />
     )} />
   );
@@ -34,8 +35,8 @@ const Root = ({ store }) => (
       <Switch>
         <PrivateRoute path="/" exact component={DashboardScreen} />
 
-        <Route path="/loading" exact component={LoadingScreen} />
-        <Route path="/login" exact component={AuthLoginScreen} />
+        <Route path="/loading" component={AuthLoadingScreen} />
+        <Route path="/login" component={AuthLoginScreen} />
 
         <PrivateRoute path="/profile" exact component={AuthProfileScreen} />
 

@@ -9,4 +9,8 @@ export default class APIAuth {
     }).contentJson().post();
   }
 
+  static token() {
+    return BeamAPI.url('/auth/token').needAuth().get();
+  }
+
 }

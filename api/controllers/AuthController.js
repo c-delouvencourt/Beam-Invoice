@@ -20,7 +20,7 @@ module.exports = {
         if (!user) return res.APIResponse(AuthErrors.NO_REGISTERED, false, {});
 
         bcrypt.compare(req.param('password'), user.password, function (error, matched) {
-          if (error) return res.APIResponse(AuthErrors.INVALID_PASSWORD, false, {});
+          if (error) return res.APIResponse(AuthErrors.INVALID_PASSWORD, false, error);
           if (!matched) return res.APIResponse(AuthErrors.INVALID_PASSWORD, false, {});
 
           user.jwt = jwt.sign(user.toJSON(), sails.config.custom.jwt_token, {
@@ -35,16 +35,21 @@ module.exports = {
     }
   },
 
-  token: function (req, res) {
-    Users.findOne(req.user.id).exec(function callback(error, user) {
-      if (err) return res.APIResponse(MainErrors.DB_ERROR, false, {});
-      if (!user) return res.APIResponse(AuthErrors.NO_REGISTERED, false, {});
-
-      user.jwt = jwt.sign(user.toJSON(), sails.config.custom.jwt_token, {
+  token: async function (req, res) {
+    try {
+      let jwtToken = await jwt.sign(req.user.toJSON(), sails.config.custom.jwt_token, {
         expiresIn: '7d'
       });
 
-      return res.APIResponse(MainErrors.OK, false, {user});
-    });
+      req.user.jwt = jwtToken;
+
+      return res.APIResponse(MainErrors.OK, false, {user: req.user});
+    }catch (e) {
+      return res.APIResponse(MainErrors.ROUTES_ERROR, false, {error: e.message});
+    }
   },
+
+  profile: function (req, res) {
+
+  }
 };

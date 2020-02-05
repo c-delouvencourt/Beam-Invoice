@@ -22,7 +22,7 @@ module.exports = function(req, res, next) {
           return res.APIResponse(AuthErrors.SESSION_EXPIRATION, false, {});
       }
 
-      Users.findOne(decoded.id).exec(function callback(error, user) {
+      Users.findOne({id: decoded.id}).exec(function callback(error, user) {
         if (error) return res.APIResponse(MainErrors.DB_ERROR, false, {});
         if (!user) return res.APIResponse(AuthErrors.INVALID_PASSWORD, false, {});
 
