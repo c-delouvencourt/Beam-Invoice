@@ -88,6 +88,7 @@
       "settings": "Paramètres",
       "updates": "Mise à jour",
       "usersContent": {
+        "user_added": "L'utilisateur a bien été ajouté, veuillez copier ses identifiants de connexion.",
         "add_user": "Ajouter un utilisateur"
       }
     },

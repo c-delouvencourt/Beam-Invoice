@@ -41,6 +41,7 @@ class AuthFormLoginComponent extends Component {
           initialValues={{email: '', password: ''}}
           onSubmit={(values, actions) => {
             this.setState({loading: true});
+            actions.setSubmitting(true);
 
             APIAuth.login(values.email, values.password).then(r => HandleBeamAPI.handleWithError(r, (r) => {
               this.setState({loading: false});
@@ -75,8 +76,6 @@ class AuthFormLoginComponent extends Component {
                     Vous êtes désormais connecté sur Beam, vous serez redirigé dans 3 secondes.
                   </div>
                 </article>
-              ) : this.state.loading ? (
-                <Loading/>
               ) : (
                 <div>
                   {status && status.msg && <article className="message is-danger mt-10 mb-30">
@@ -93,10 +92,10 @@ class AuthFormLoginComponent extends Component {
                                            icon={"fas fa-envelope"} errors={errors} values={values} touched={touched}
                                            handleBlur={handleBlur} handleChange={handleChange}/>
                   <FormPasswordInputComponent label={t('form.password')} element={"password"} placeholder={"***********"}
-                                           icon={"fas fa-shield-alt"} errors={errors} values={values} touched={touched}
-                                           handleBlur={handleBlur} handleChange={handleChange}/>
+                                              icon={"fas fa-shield-alt"} errors={errors} values={values} touched={touched}
+                                              handleBlur={handleBlur} handleChange={handleChange}/>
 
-                  <button type="submit" className="button is-primary custom-button m-t-30 is-fullwidth" disabled={isSubmitting}>
+                  <button type="submit" className={"button is-primary custom-button m-t-30 is-fullwidth " + (this.state.loading ? "is-loading" : "")} disabled={isSubmitting}>
                     {t('form.login')}
                   </button>
                 </div>

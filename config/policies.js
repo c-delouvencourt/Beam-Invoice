@@ -47,5 +47,8 @@ module.exports.policies = {
     create: ["isAuth", hasPermission("contracts:create")],
     update: ["isAuth", hasPermission("contracts:update")],
     archive: ["isAuth", hasPermission("contracts:archive")]
-  }
+  },
+  AdminUsersController: {
+    list: ["isAuth"]
+  },
 };

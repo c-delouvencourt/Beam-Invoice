@@ -4,9 +4,6 @@ import * as Yup from "yup";
 import FormEmailInputComponent from "../Inputs/FormEmailInputComponent";
 import i18n from "../../../locales/i18n";
 import {withTranslation} from "react-i18next";
-import Loading from "../../Loading";
-import FormPasswordInputComponent from "../Inputs/FormPasswordInputComponent";
-import APIAuth from "../../../api/services/APIAuth";
 import HandleBeamAPI from "../../../api/HandleBeamAPI";
 import APIAdminUsers from "../../../api/services/Admin/APIAdminUsers";
 import FormTextInputComponent from "../Inputs/FormTextInputComponent";
@@ -19,8 +16,7 @@ const ValidationSchema = Yup.object().shape({
   email: Yup.string()
     .email(i18n.t('validation.email')),
   rank: Yup.string().min(3).max(20)
-    .required(i18n.t('validation.rank')),
-  permissions: Yup.array().required(i18n.t('validation.rank'))
+    .required(i18n.t('validation.rank'))
 });
 
 class AdminFormUsersComponent extends Component {
@@ -41,16 +37,23 @@ class AdminFormUsersComponent extends Component {
     return (
       <div style={{width: '100%'}}>
         <Formik
-          initialValues={{firstName: '', name: '', email: '', rank: '', permissions: ''}}
+          initialValues={{firstName: '', name: '', email: '', rank: '', permissions: []}}
           onSubmit={(values, actions) => {
             this.setState({loading: true});
+            actions.setSubmitting(true);
 
-            APIAdminUsers.create(values.firstName, values.name, values.email, values.rank, values.permissions).then(r => HandleBeamAPI.handleWithError(r, (r) => {
+            APIAdminUsers.create(values.firstName, values.name, values.email, values.rank, JSON.stringify([])).then(r => HandleBeamAPI.handleWithError(r, (r) => {
               this.setState({loading: false});
               actions.setSubmitting(false);
               actions.setStatus({ msg: t(r.data.message) });
             })).then(data => {
-
+              this.setState({loading: false, success: true, credentials: {
+                  email: values.email,
+                  password: data.password
+                }});
+              actions.setSubmitting(false);
+              actions.resetForm();
+              this.props.onUpdate();
             }).catch(e => HandleBeamAPI.error(e));
           }}
           validationSchema={ValidationSchema}
@@ -73,11 +76,12 @@ class AdminFormUsersComponent extends Component {
                     <button className="delete" aria-label="delete"/>
                   </div>
                   <div className="message-body">
-                    L'utilisateur a été ajouté voici ses identifiants.
+                    {t('admin.usersContent.user_added')}
+                    <br/><br/>
+                    <b>{t('form.email')}: </b> <code>{this.state.credentials.email}</code><br/>
+                    <b>{t('form.password')}: </b> <code>{this.state.credentials.password}</code>
                   </div>
                 </article>
-              ) : this.state.loading ? (
-                <Loading/>
               ) : (
                 <div>
                   {status && status.msg && <article className="message is-danger mt-10 mb-30">
@@ -94,8 +98,8 @@ class AdminFormUsersComponent extends Component {
                                           icon={"fas fa-tag"} errors={errors} values={values} touched={touched}
                                           handleBlur={handleBlur} handleChange={handleChange}/>
                   <FormTextInputComponent label={t('form.name')} element={"name"} placeholder={"Doe"}
-                                           icon={"fas fa-tag"} errors={errors} values={values} touched={touched}
-                                           handleBlur={handleBlur} handleChange={handleChange}/>
+                                          icon={"fas fa-tag"} errors={errors} values={values} touched={touched}
+                                          handleBlur={handleBlur} handleChange={handleChange}/>
                   <FormEmailInputComponent label={t('form.email')} element={"email"} placeholder={"client@beam.io"}
                                            icon={"fas fa-envelope"} errors={errors} values={values} touched={touched}
                                            handleBlur={handleBlur} handleChange={handleChange}/>
@@ -103,7 +107,7 @@ class AdminFormUsersComponent extends Component {
                                           icon={"fas fa-user-tag"} errors={errors} values={values} touched={touched}
                                           handleBlur={handleBlur} handleChange={handleChange}/>
 
-                  <button type="submit" className="button is-primary custom-button m-t-30 is-fullwidth" disabled={isSubmitting}>
+                  <button type="submit" className={"button is-primary custom-button m-t-30 is-fullwidth " + (this.state.loading ? "is-loading" : "")} disabled={isSubmitting}>
                     {t('form.add')}
                   </button>
                 </div>

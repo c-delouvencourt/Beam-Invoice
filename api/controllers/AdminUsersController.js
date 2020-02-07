@@ -17,24 +17,26 @@ module.exports = {
       if (params === false) return res.APIResponse(MainErrors.INVALID_REQUEST, false, {validation: params.data});
 
       let password = await generator.generate({
-        length: 10,
+        length: 8,
         numbers: true
       });
 
-      bcrypt.hash(password, 8, function (error, hash) {
-        if (error) return res.APIResponse(AuthErrors.INVALID_PASSWORD, false, {});
+      let apiToken = await generator.generate({
+        length: 35,
+        numbers: true
+      });
 
-        Users.create({
-          firstName: req.param('firstName'),
-          name: req.param('name'),
-          email: req.param('email'),
-          rank: req.param('rank'),
-          permissions: req.param('permissions'),
-          password: hash
-        }).exec(function callback(err, user) {
-          if (err) return res.APIResponse(MainErrors.DB_ERROR, false, {});
-          return res.APIResponse(MainErrors.OK, false, {user, password});
-        });
+      Users.create({
+        firstName: req.param('firstName'),
+        name: req.param('name'),
+        email: req.param('email'),
+        rank: req.param('rank'),
+        permissions: [],
+        password: password,
+        apiToken: apiToken
+      }).exec(function callback(err, user) {
+        if (err) return res.APIResponse(MainErrors.DB_ERROR, false, err);
+        return res.APIResponse(MainErrors.OK, false, {user, password});
       });
     }catch (e) {
       return res.APIResponse(MainErrors.ROUTES_ERROR, false, {error: e.message});

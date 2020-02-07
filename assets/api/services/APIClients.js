@@ -9,7 +9,7 @@ export default class APIClients {
   }
 
   static list(archive = false) {
-    return BeamAPI.url('/clients').parameters({archive}).get();
+    return BeamAPI.url('/client').parameters({archive}).get();
   }
 
 }

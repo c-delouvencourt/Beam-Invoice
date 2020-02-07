@@ -12,4 +12,8 @@ export default class APIAdminUsers {
     }).contentJson().put();
   }
 
+  static list() {
+    return BeamAPI.url('/admin/users').needAuth().get();
+  }
+
 }

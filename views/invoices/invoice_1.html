@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charest="utf-8" />
+  <title>Facture</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.0/css/bulma.min.css" integrity="sha256-D9M5yrVDqFlla7nlELDaYZIpXfFWDytQtiV+TaH6F1I=" crossorigin="anonymous" />
+
+  <style>
+    body, html {
+      overflow: hidden !important;
+    }
+    .invoice {
+      overflow: hidden !important;
+    }
+    .header-background{
+      overflow: hidden !important;
+      position: absolute;
+      top: -100px;
+      left: 0px;
+      right: 0px;
+      width: 120vw;
+      height: 400px;
+      margin-left: -10vw;
+      transform: rotate(-5deg);
+      background-color: #3c4bdf;
+      background-image: linear-gradient(58deg, #3c4bdf 0%, #B721FF 100%);
+      z-index: -1;
+    }
+    .header{
+      overflow: hidden !important;
+      padding: 40px;
+      height: 600px;
+      width: 100vw;
+      z-index: 1000;
+    }
+    .header-content{
+      z-index: 1000;
+    }
+    .logo {
+      height: 70px;
+      float: right;
+    }
+    .title-custom{
+      letter-spacing: 1px;
+      font-size: 13 px;
+    }
+  </style>
+</head>
+<body>
+<div class="invoice">
+  <div class="header">
+    <div class="header-background"></div>
+    <div class="header-content columns">
+      <div class="column is-6">
+        <h3 class="title is-3 has-text-weight-bold has-text-white title-custom">FACTURE</h3>
+      </div>
+      <div class="column is-6">
+        <img src="../../assets/images/logo_white.png" class="logo"/>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
