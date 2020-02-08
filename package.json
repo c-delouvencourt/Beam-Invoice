@@ -57,6 +57,7 @@
     "sails-disk": "^1.0.1",
     "sails-hook-organics": "^0.16.0",
     "sails-hook-orm": "^2.1.1",
+    "sails-hook-pdf": "0.0.7",
     "sails-hook-req-validate": "^2.7.1",
     "sails-hook-sockets": "^2.0.0",
     "sails-mysql": "^1.0.1",

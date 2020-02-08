@@ -44,6 +44,7 @@ module.exports.routes = {
 
   // Invoices
   'GET /api/invoices': "InvoicesController.list",
+  'GET /api/invoices/test': "InvoicesController.pdf",
 
   // Estimates
   'GET /api/estimates': "EstimatesController.list",
