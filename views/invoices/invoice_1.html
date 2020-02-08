@@ -1,61 +1,249 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charest="utf-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <title>Facture</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.0/css/bulma.min.css" integrity="sha256-D9M5yrVDqFlla7nlELDaYZIpXfFWDytQtiV+TaH6F1I=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.0/css/bulma.min.css"
+        integrity="sha256-D9M5yrVDqFlla7nlELDaYZIpXfFWDytQtiV+TaH6F1I=" crossorigin="anonymous"/>
+  <link href="https://fonts.googleapis.com/css?family=Product+Sans:300,400,600,700,800,900" rel="stylesheet">
 
   <style>
     body, html {
       overflow: hidden !important;
+      font-family: "Product Sans", sans-serif;
+      background: #fbfbfb;
     }
+
     .invoice {
       overflow: hidden !important;
     }
-    .header-background{
-      overflow: hidden !important;
-      position: absolute;
-      top: -100px;
-      left: 0px;
-      right: 0px;
-      width: 120vw;
-      height: 400px;
-      margin-left: -10vw;
-      transform: rotate(-5deg);
-      background-color: #3c4bdf;
-      background-image: linear-gradient(58deg, #3c4bdf 0%, #B721FF 100%);
-      z-index: -1;
-    }
-    .header{
+
+    .header {
       overflow: hidden !important;
       padding: 40px;
-      height: 600px;
+      min-height: 450px;
       width: 100vw;
       z-index: 1000;
     }
-    .header-content{
+
+    .header-content {
       z-index: 1000;
     }
-    .logo {
-      height: 70px;
-      float: right;
+
+    .content {
+      margin-top: -35px;
     }
-    .title-custom{
+
+    .content .table-padding {
+      background: #ffffff;
+      padding: 0 30px 20px 30px !important;
+    }
+
+    .table-padding {
+      padding: 0 30px 20px 30px !important;
+    }
+
+    .content table td, .content table th {
+      border: 1px solid #ffffff;
+      vertical-align: middle;
+    }
+
+    .content table th {
+      color: #292929 !important;
+      text-transform: uppercase;
+      font-weight: 600;
       letter-spacing: 1px;
-      font-size: 13 px;
+      font-size: 14px;
+    }
+
+    .table thead {
+      background-color: #fbfbfb;
+    }
+
+    .logo {
+      height: 60px;
+    }
+
+    .title-custom {
+      letter-spacing: 1px;
+      font-size: 13px;
+      margin-top: 10px;
+    }
+
+    .title-custom-small {
+      letter-spacing: 4px;
+      font-size: 11px;
+      margin-top: 10px;
+    }
+
+    .title-custom-smaller {
+      letter-spacing: 1px;
+      font-size: 12px !important;
+      margin-top: 10px;
     }
   </style>
 </head>
 <body>
 <div class="invoice">
   <div class="header">
-    <div class="header-background"></div>
-    <div class="header-content columns">
+    <div class="header-content columns is-multiline">
       <div class="column is-6">
-        <h3 class="title is-3 has-text-weight-bold has-text-white title-custom">FACTURE</h3>
+        <img src="../../assets/images/logo.png" class="logo"/>
       </div>
       <div class="column is-6">
-        <img src="../../assets/images/logo_white.png" class="logo"/>
+        <p class="has-text-weight-bold has-text-right">NOCTURNELAB</p>
+        <p class="has-text-right" style="line-height: 1.2rem; color: #a0a0a0; font-size: 1rem">
+          221 Rue de Montlevin<br/>
+          73490 LA RAVOIRE<br/>
+          <b>SIRET :</b> 665 558 485<br/>
+          <b>TVA :</b> 665z558e485<br/>
+        </p>
+      </div>
+      <div class="column is-6" style="margin-top: 25px">
+        <h5 class="title is-5 has-text-weight-bold title-custom-small">CLIENT</h5>
+        <p class="has-text-weight-bold">Beam</p>
+        <p style="line-height: 1.2rem; color: #a0a0a0; font-size: 1rem">
+          221 Rue de Montlevin<br/>
+          73490 LA RAVOIRE<br/>
+          <b>SIRET :</b> 665 558 485<br/>
+          <b>TVA :</b> 665z558e485<br/>
+        </p>
+      </div>
+      <div class="column is-6" style="margin-top: 20px">
+        <h3 class="title is-3 has-text-weight-bold has-text-right title-custom">FACTURE</h3>
+        <div class="columns" style="margin-top: 50px">
+          <div class="column is-4">
+            <h5 class="title is-5 has-text-weight-bold has-text-centered title-custom-smaller">NUMERO</h5>
+            <p class="has-text-centered"
+               style="line-height: 1.2rem; color: #a0a0a0; font-size: 1.3rem; margin-top: -15px; font-weight: lighter">
+              <span class="tag is-light is-rounded" style="font-size: 0.8rem;">#3</span></p>
+          </div>
+          <div class="column is-4">
+            <h5 class="title is-5 has-text-weight-bold has-text-centered title-custom-smaller">DATE DE CREATION</h5>
+            <p class="has-text-centered"
+               style="line-height: 1.2rem; color: #a0a0a0; font-size: 1.3rem; margin-top: -15px; font-weight: lighter">
+              <span class="tag is-light is-rounded" style="font-size: 0.8rem;">27/10/2019</span></p>
+          </div>
+          <div class="column is-4">
+            <h5 class="title is-5 has-text-weight-bold has-text-centered title-custom-smaller">STATUT</h5>
+            <p class="has-text-centered"
+               style="line-height: 1.2rem; color: #a0a0a0; font-size: 1.3rem; margin-top: -15px; font-weight: lighter">
+              <span class="tag is-success is-rounded" style="font-size: 0.8rem;">Payé</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="table-padding" style="padding-bottom: 20px">
+      <table class="table is-fullwidth">
+        <thead>
+        <tr>
+          <th>Produit</th>
+          <th class="has-text-right">Quantité</th>
+          <th class="has-text-right">Prix HT</th>
+          <th class="has-text-right">Remise</th>
+          <th class="has-text-right">Prix total</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <th style="max-width: 32vw">
+            <h5 class="title is-5 title-custom-smaller"
+                style="margin-bottom: 0px; text-transform: none; letter-spacing: 0px; font-size: 14px !important;">Mise
+              en place d'un back-office</h5>
+            <p
+              style="font-size: 12px; color: #636363; text-transform: none; line-height: 0.8rem; letter-spacing: 0px; font-weight: 400;">
+              Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant
+              impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500.</p>
+          </th>
+          <td class="has-text-right">1</td>
+          <td class="has-text-right">230.0€</td>
+          <td class="has-text-right">0%</td>
+          <td class="has-text-right">230.0€</td>
+        </tr>
+        <tr>
+          <th style="max-width: 32vw">
+            <h5 class="title is-5 title-custom-smaller"
+                style="margin-bottom: 0px; text-transform: none; letter-spacing: 0px; font-size: 14px !important;">Mise
+              en place d'un back-office</h5>
+            <p
+              style="font-size: 12px; color: #636363; text-transform: none; line-height: 0.8rem; letter-spacing: 0px; font-weight: 400;">
+              Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant
+              impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500.</p>
+          </th>
+          <td class="has-text-right">1</td>
+          <td class="has-text-right">230.0€</td>
+          <td class="has-text-right">0%</td>
+          <td class="has-text-right">230.0€</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <table class="table is-fullwidth">
+      <tbody>
+      <tr>
+        <th style="background: #fbfbfb; height: 55px;">
+          <h5 class="title is-5 title-custom-smaller has-text-right"
+              style="margin-bottom: 0px; text-transform: none; letter-spacing: 0px; font-size: 14px !important; margin-top: 0">
+            Sous-total</h5>
+        </th>
+        <td class="has-text-right" style="width: 200px; padding-right: 45px; background: #ececec; font-weight: bold">
+          460.00€
+        </td>
+      </tr>
+      <tr>
+        <th style="background: #fbfbfb; height: 55px;">
+          <h5 class="title is-5 title-custom-smaller has-text-right"
+              style="margin-bottom: 0px; text-transform: none; letter-spacing: 0px; font-size: 14px !important; margin-top: 0">
+            TVA
+            0%</h5>
+          <p class="has-text-right"
+             style="font-size: 12px; color: #636363; text-transform: none; line-height: 0.8rem; letter-spacing: 0px; font-weight: 400;">
+            Exonéré</p>
+        </th>
+        <td class="has-text-right" style="width: 200px; padding-right: 45px; background: #ececec; font-weight: bold">
+          0.00€
+        </td>
+      </tr>
+      <tr>
+        <th style="background: #fbfbfb; height: 55px;">
+          <h5 class="title is-5 title-custom-smaller has-text-right"
+              style="margin-bottom: 0px; text-transform: none; letter-spacing: 0px; font-size: 14px !important; margin-top: 0">
+            Total</h5>
+        </th>
+        <td class="has-text-right" style="width: 200px; padding-right: 45px; background: #ececec; font-weight: bold">
+          460.00€
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="table-padding">
+    <div class="columns is-multiline">
+      <div class="column is-6">
+        <div style="min-height: 120px; border: 1px solid #e7e7e7; padding: 20px; border-radius: 5px">
+          <b>Moyens de paiement:</b> Virement Sépa <br>
+          <b>Banque:</b> Société Générale <br>
+          <b>SWIFT/BIC:</b> SOGEFRPP <br>
+          <b>IBAN:</b> FR76 3000 3005 7000 0504 1457 371 <br>
+        </div>
+      </div>
+      <div class="column is-6">
+        <div style="min-height: 140px; border: 1px solid #e7e7e7; padding: 20px; border-radius: 5px">
+          <b>Conditions de paiement:</b> 0 jours <br>
+          <b>Échéance:</b> À la réception de la facture <br>
+          <b>Intérêts de retard:</b> 10,0 % <br>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="columns is-multiline">
+      <div class="column is-6">
+        <i>En votre aimable règlement et avec nos remerciements. <br>Pas d’escompte pour règlement anticipé.</i>
+      </div>
+      <div class="column is-6 has-text-right">
+        <b>NocturneLab</b> - Micro-Entreprise<br/>Numéro de SIRET: 83421133600013
       </div>
     </div>
   </div>
