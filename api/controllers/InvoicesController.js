@@ -17,7 +17,7 @@ module.exports = {
         a: "Bob Dole",
       },
       {
-        output: 'storage/invoice_3.pdf',
+        output: 'storage/invoice_4.pdf',
         width: '21cm',
         height: '29.7cm'
       },

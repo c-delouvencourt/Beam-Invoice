@@ -9,6 +9,7 @@ import FormSelectLanguageSmallInputComponent from "../Forms/Inputs/FormSelectLan
 import 'bulma-extensions/bulma-tooltip/dist/css/bulma-tooltip.min.css';
 import StatusUtils from "../../utils/StatusUtils";
 import {withRouter} from "react-router";
+import Avatar from "react-avatar";
 
 class UserNavbar extends Component {
 
@@ -97,9 +98,7 @@ class UserNavbar extends Component {
           <div className="end-sidebar">
             <FormSelectLanguageSmallInputComponent/>
             <Link to={"/profile"} className="sidebar-link">
-              <figure className={StatusUtils.isActiveUrlImage("/profile", this.props.location.pathname, "image is-32x32")}>
-                <img className="is-rounded" src="https://bulma.io/images/placeholders/128x128.png"/>
-              </figure>
+              <Avatar name={"Clément de Louvencourt"} round="50px" size={45} />
             </Link>
           </div>
         </aside>
