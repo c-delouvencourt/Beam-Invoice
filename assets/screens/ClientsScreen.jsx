@@ -13,6 +13,7 @@ import {connect} from "react-redux";
 import {updateClients} from "../redux/actions/clients/ClientsActions";
 import APIClients from "../api/services/APIClients";
 import HandleBeamAPI from "../api/HandleBeamAPI";
+import ClientsAutoCompleteComponent from "../components/Widgets/ClientsAutoCompleteComponent";
 
 const { up, down } = Keys;
 
@@ -44,6 +45,10 @@ class ClientsScreen extends Component {
     }).catch(e => HandleBeamAPI.error(e));
   }
 
+  onSuggestionsFetchRequested(value, reason){
+
+  }
+
   render() {
     const {t} = this.props;
 
@@ -52,12 +57,7 @@ class ClientsScreen extends Component {
         <div className="columns is-multiline">
           <SidebarComponent title={t('navbar.clients')}>
             <div className="field">
-              <div className="control has-icons-left">
-                <input className="input custom-input" type="text" placeholder={t('clients.search')}/>
-                <span className="icon is-small is-left">
-                    <i className="fas fa-search"></i>
-                  </span>
-              </div>
+              <ClientsAutoCompleteComponent clients={this.props.clients}/>
             </div>
             <a className="button user-button is-primary is-fullwidth m-b-10" onClick={() => {
               this.setState({ addClientModal: true });
@@ -75,7 +75,7 @@ class ClientsScreen extends Component {
           <div className="column is-9 is-12-mobile">
             <div className="columns is-multiline">
               {this.props.clients.map((c, k) => (
-                <ClientsComponent delay={150 * k}/>
+                <ClientsComponent client={c} delay={150 * k}/>
               ))}
             </div>
           </div>
@@ -85,7 +85,9 @@ class ClientsScreen extends Component {
         }} buttons={(
           <button className="button is-primary custom-button" style={{width: 125}}>{t('form.add')}</button>
         )}>
-          <ClientsFormAddComponent/>
+          <ClientsFormAddComponent onClose={() => {
+            this.setState({addClientModal: !this.state.addClientModal});
+          }}/>
         </ModalComponent>
       </PanelComponent>
     );

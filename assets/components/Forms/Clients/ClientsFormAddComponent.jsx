@@ -64,6 +64,7 @@ class ClientsFormAddComponent extends Component {
               actions.setStatus({ msg: t(r.data.message) });
             })).then(data => {
               this.props.updateClients(data.clients);
+              this.props.onClose();
             }).catch(e => HandleBeamAPI.error(e));
           }}
           validationSchema={ValidationSchema}
@@ -116,7 +117,7 @@ class ClientsFormAddComponent extends Component {
                                         icon={"fas fa-location"} errors={errors} values={values} touched={touched}
                                         handleBlur={handleBlur} handleChange={handleChange}/>
 
-                <div className="columns">
+                <div className="columns is-multiline">
                   <div className="column is-6">
                     <FormTextInputComponent label={t('form.city')} element={"city"} placeholder={"Paris"}
                                             icon={"fas fa-location"} errors={errors} values={values} touched={touched}
@@ -124,6 +125,11 @@ class ClientsFormAddComponent extends Component {
                   </div>
                   <div className="column is-6">
                     <FormTextInputComponent label={t('form.postalCode')} element={"postalCode"} placeholder={"75000"}
+                                            icon={"fas fa-location"} errors={errors} values={values} touched={touched}
+                                            handleBlur={handleBlur} handleChange={handleChange}/>
+                  </div>
+                  <div className="column is-12">
+                    <FormTextInputComponent label={t('form.country')} element={"country"} placeholder={"France"}
                                             icon={"fas fa-location"} errors={errors} values={values} touched={touched}
                                             handleBlur={handleBlur} handleChange={handleChange}/>
                   </div>

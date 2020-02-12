@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {withTranslation} from "react-i18next";
+import Avatar from "react-avatar";
 
 class ClientsComponent extends Component {
 
@@ -17,13 +18,13 @@ class ClientsComponent extends Component {
             <article className="media">
               <figure className="media-left">
                 <p className="image is-64x64">
-                  <img className="is-rounded" src="https://bulma.io/images/placeholders/128x128.png"/>
+                  <Avatar name={this.props.client.entrepriseName ? this.props.client.entrepriseName : this.props.client.fullName} round="50px" size={64} />
                 </p>
               </figure>
               <div className="media-content">
                 <div className="content">
                   <p style={{color: "#b9c2cf"}}>
-                    <strong>Jean Dupond</strong> <small>Il y a 3 mois</small>
+                    <strong>{this.props.client.entrepriseName ? this.props.client.entrepriseName : this.props.client.fullName }</strong> <small>Il y a 3 mois</small>
                   </p>
                 </div>
                 <a className="button light-button-card">{t('clients.view')}</a>

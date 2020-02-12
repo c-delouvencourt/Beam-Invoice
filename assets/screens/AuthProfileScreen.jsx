@@ -9,6 +9,8 @@ import {loginUser, logoutUser} from "../redux/actions/auth/AuthActions";
 import {connect} from "react-redux";
 import AuthFormProfileComponent from "../components/Forms/Auth/AuthFormProfileComponent";
 import ModalComponent from "../components/Modals/ModalComponent";
+import AuthUploadPictureComponent from "../components/Auth/AuthUploadPictureComponent";
+import Avatar from "react-avatar";
 
 class AuthProfileScreen extends Component {
 
@@ -30,7 +32,7 @@ class AuthProfileScreen extends Component {
             <article className="media account-profil-widget">
               <figure className="media-left">
                 <p className="image is-64x64">
-                  <img  className="is-rounded" src="https://bulma.io/images/placeholders/128x128.png"/>
+                  <Avatar name={this.props.user.firstName + " " + this.props.user.name} round="50px" size={64} />
                 </p>
               </figure>
               <div className="media-content">
@@ -60,6 +62,7 @@ class AuthProfileScreen extends Component {
           <div className="column is-9 is-12-mobile">
             <div className="card is-fullwidth" style={{minHeight: 600}}>
               <div className="card-content">
+                <AuthUploadPictureComponent/>
                 <hr/>
                 <AuthFormProfileComponent/>
               </div>

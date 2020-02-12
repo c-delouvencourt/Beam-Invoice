@@ -33,23 +33,7 @@ module.exports = {
   },
   create: async function (req, res) {
     try {
-      const params = req.validate({
-        'entrepriseName?': 'string',
-        'fullName': 'string',
-        'siret?': 'string',
-        'tvaNumber?': 'string',
-        'email?': ['string', 'email'],
-        'phone?': ['string', 'mobilePhone'],
-        'address': 'string',
-        'address2?': 'string',
-        'city': 'string',
-        'postalCode': 'postalCode',
-        'country': 'string'
-      });
-
-      if (params === false) return res.APIResponse(MainErrors.INVALID_REQUEST, false, {validation: params.data});
-
-      let client = await Clients.create({
+      await Clients.create({
         entrepriseName: req.param('entrepriseName'),
         fullName: req.param('fullName'),
         siret: req.param('siret'),
