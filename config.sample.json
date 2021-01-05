@@ -1,12 +1,12 @@
 {
   "jwt": {
-    "key": "yUkjoQ39JD9uifVP5NBVeKaSdi1PHFWezPYo725H0CAoQaI5fLEgQ0ijXSu"
+    "key": ""
   },
   "db": {
-    "host": "mbp.c2yszzszwpyu.eu-west-3.rds.amazonaws.com",
-    "user": "admin",
-    "password": "u3ENwh05ytD0",
-    "port": "3306",
-    "database": "Beam"
+    "host": "",
+    "user": "",
+    "password": "",
+    "port": "",
+    "database": ""
   }
 }
