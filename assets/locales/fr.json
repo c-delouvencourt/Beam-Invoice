@@ -54,7 +54,8 @@
       "login" : "Connexion",
       "add" : "Ajouter",
       "edit" : "Modifier",
-      "cancel" : "Annuler"
+      "cancel" : "Annuler",
+      "societeSettings" : "Paramètres de votre entreprise"
     },
     "profile": {
       "change-password": "Changement du mot de passe"
@@ -73,8 +74,10 @@
       "country" : "Le pays est obligatoire !",
       "siret" : "Le numéro de SIRET est obligatoire !",
       "tvaNumber" : "Le numéro de TVA est obligatoire",
+      "tva" : "Le taux de TVA est obligatoire",
       "entrepriseName" : "La raison sociale de l'entreprise est obligatoire !",
       "fullNameDirector" : "Le nom complet du dirigeant est obligatoire !",
+      "website" : "Le site web est obligatoire !",
       "server": {
 
       }
@@ -85,6 +88,7 @@
     "admin": {
       "users": "Utilisateurs",
       "society": "Mon Entreprise",
+      "addressSociety": "Adresse de l'entreprise",
       "settings": "Paramètres",
       "updates": "Mise à jour",
       "usersContent": {

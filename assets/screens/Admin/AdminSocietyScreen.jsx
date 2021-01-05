@@ -7,6 +7,7 @@ import {withRouter} from "react-router";
 import keydown, {Keys} from 'react-keydown';
 import PanelComponent from "../../components/User/PanelComponent";
 import AdminPanelComponent from "../../components/Admin/AdminPanelComponent";
+import AdminFormSocietyComponent from "../../components/Forms/Admin/AdminFormSocietyComponent";
 
 const { up, down } = Keys;
 
@@ -32,7 +33,7 @@ class AdminSocietyScreen extends Component {
     return (
       <AdminPanelComponent title={t('admin.society')}>
         <div className="columns is-multiline m-t-30">
-          <h1>test2</h1>
+          <AdminFormSocietyComponent/>
         </div>
       </AdminPanelComponent>
     );
